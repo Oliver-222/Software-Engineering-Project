@@ -4,7 +4,7 @@ public class DataStoragePrototype {
 
 	public void prototype(DataStorage ds) {
 		
-		LoginRequest loginRequest = new LoginRequest();
+		LoginRequest loginRequest = new LoginRequest(null,null,null,null,null,null);
 		
 		//Will send the DataStorage a read request with the required information. Will receive a response with the input data. 
 		ReadResponse readResponse = ds.read(new ReadRequest(loginRequest));
