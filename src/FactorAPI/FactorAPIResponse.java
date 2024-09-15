@@ -1,4 +1,4 @@
-package FactorAPI;
+package factorAPI;
 
 public class FactorAPIResponse{
     private String responseCode;

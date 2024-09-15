@@ -1,4 +1,4 @@
-package FactorAPI;
+package factorAPI;
 
 import java.util.Base64;
 

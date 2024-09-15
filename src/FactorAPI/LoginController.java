@@ -1,10 +1,10 @@
-package FactorAPI;
+package factorAPI;
 
 public interface LoginController {
 
-	/** Logs the user in
-	 * @param loginRequest - contains the info needed to log a user in
-	 * */
-	LoginResponse login(LoginRequest loginRequest);
+    /** Logs the user in
+     * @param loginRequest - contains the info needed to log a user in
+     * */
+    LoginResponse login(LoginRequest loginRequest);
 
 }
