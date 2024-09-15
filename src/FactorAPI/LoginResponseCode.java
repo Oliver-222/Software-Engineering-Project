@@ -1,4 +1,4 @@
-package factorAPI;
+package factorapi;
 public enum LoginResponseCode {
     SUCCESS(1, true),
     WRONG_PASSWORD(3, false),

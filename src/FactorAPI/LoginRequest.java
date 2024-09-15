@@ -1,4 +1,4 @@
-package factorAPI;
+package factorapi;
 //What a user needs to login and submit their request
 public class LoginRequest {
     String username;

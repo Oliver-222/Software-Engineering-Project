@@ -1,4 +1,4 @@
-package factorAPI;
+package factorapi;
 public class FactorAPI {
     private static final LoginController authentication = new LoginControllerImpl();
 

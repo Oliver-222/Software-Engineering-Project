@@ -1,4 +1,4 @@
-package factorAPI;
+package factorapi;
 //Gets response code from LoginResponseCode
 public class LoginResponse{
     private LoginResponseCode responseCode;

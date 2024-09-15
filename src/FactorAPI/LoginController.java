@@ -1,4 +1,4 @@
-package factorAPI;
+package factorapi;
 
 public interface LoginController {
 
