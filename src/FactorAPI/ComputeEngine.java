@@ -1,6 +1,6 @@
 package factorapi;
 
-import ComputeJobRequest;
+import jobrequests.ComputeJobRequest; 
 
 public interface ComputeEngine {
     String initializeJob(ComputeJobRequest request);
