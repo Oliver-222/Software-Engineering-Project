@@ -1,13 +1,10 @@
-package com.example.computeapi.controller;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 
 /**
  * Controller for handling compute job requests.
  */
 @RestController
-@RequestMapping("/api/compute-job")
+@RequestMapping
 public class ComputeJobController {
 
     /**
