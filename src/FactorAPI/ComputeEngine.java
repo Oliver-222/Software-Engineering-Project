@@ -1,5 +1,8 @@
 package factorapi;
 
+import java.util.Base64;
+
+
 /**
  * Interface for the compute engine operations.
  */
