@@ -1,4 +1,5 @@
 package factorapi;
+package JobRequests;
 
 public interface ComputeJobRequest {
     String getSource();
