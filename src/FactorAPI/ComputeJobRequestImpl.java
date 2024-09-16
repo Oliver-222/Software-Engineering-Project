@@ -1,5 +1,7 @@
 package FactorAPI;
 
+import java.util.Base64
+
 /**
  * Implementation of ComputeJobRequest.
  */
