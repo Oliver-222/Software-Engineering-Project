@@ -4,21 +4,22 @@ import java.util.Base64;
 
 
 /**
- * Interface for the compute engine operations.
+ * Interface for the compute engine.
  */
 public interface ComputeEngine {
-
     /**
-     * Initializes a computation job.
-     * @param request Compute job request.
-     * @return Status of initialization.
+     * Initializes a job with the given request.
+     *
+     * @param request The job request.
+     * @return A string indicating the status of initialization.
      */
     String initializeJob(ComputeJobRequest request);
 
     /**
-     * Executes the computation.
-     * @param request Compute job request.
-     * @return Result of the computation.
+     * Executes the job with the given request.
+     *
+     * @param request The job request.
+     * @return A string indicating the status of execution.
      */
     String executeJob(ComputeJobRequest request);
 }
