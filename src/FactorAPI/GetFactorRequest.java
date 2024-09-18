@@ -1,5 +1,4 @@
 package factorapi;
-//Input to API 2 (API 2 on assignment)
 public class GetFactorRequest {
     int[] factors;
     String delimiter;

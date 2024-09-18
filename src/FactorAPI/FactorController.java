@@ -1,5 +1,10 @@
 package factorapi;
-//API 2 (Needs Implementation)
 public interface FactorController {
-    //GetFactorResponse doFactor(GetFactorRequest factorRequest); ---> Add in API2
+
+    /* GetFactorResponse doFactor(GetFactorRequest factorRequest);
+       > Get result after factoring
+       > FactorControllerIml will implement FactorController and do the actual factoring
+
+     */
+
 }
