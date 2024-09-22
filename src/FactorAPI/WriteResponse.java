@@ -1,9 +1,7 @@
 package factorapi;
 
 public interface WriteResponse {
-    public static enum WriteResponseStatus {
-        SUCCESS,
-        FAILURE;
-    }
-    WriteResponseStatus getStatus();
+
+	//Probably just some kind of success message
+	
 }
