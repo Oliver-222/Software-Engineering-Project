@@ -6,8 +6,8 @@ public class WriteRequest {
 
 	String destination; 
 	
-	public WriteRequest(GetFactorRequest factorRequest) {
-		this.destination = factorRequest.getDestination();
+	public WriteRequest(LoginRequest loginRequest) {
+		this.destination = loginRequest.destination;
 	}
 	
 	

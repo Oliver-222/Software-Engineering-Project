@@ -4,13 +4,13 @@ public class DataStoragePrototype {
 
 	public void prototype(DataStorage ds) {
 		
-		GetFactorRequest factorRequest = new GetFactorRequestImpl(null,null,null, null);
+		LoginRequest loginRequest = new LoginRequest(null,null,null,null,null,null);
 		
 		//Will send the DataStorage a read request with the required information. Will receive a response with the input data. 
-		ReadResponse readResponse = ds.read(new ReadRequest(factorRequest));
+		ReadResponse readResponse = ds.read(new ReadRequest(loginRequest));
 		
 		//Will send a write request with the factor result and the destination. Will receive some kind of confirmation. 
-		WriteResponse writeResponse = ds.write(new WriteRequest(factorRequest));
+		WriteResponse writeResponse = ds.write(new WriteRequest(loginRequest));
 		
 	}
 	
