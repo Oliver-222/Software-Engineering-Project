@@ -22,6 +22,11 @@ public class StorageMemoryTest implements DataStorage {
 		// TODO Auto-generated method stub
 		return output;
 	}
+
+	public WriteResponse write(List<String> result){
+		output.setData(result);
+		
+	}
 	
 
 }
