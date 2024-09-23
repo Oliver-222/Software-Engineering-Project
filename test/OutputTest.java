@@ -3,6 +3,10 @@ import java.util.List;
 public class OutputTest implements WriteResponse{
 
 	public List<String> data = null;
+
+	public OutputTest(){
+
+	}
 	
 	@Override
 	public WriteStatus getWriteStatus() {
