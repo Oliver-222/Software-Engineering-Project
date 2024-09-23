@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface ReadResponse {
 
-	public static final List<Integer> data;
+	public static List<Integer> data = null;
 	
 }
