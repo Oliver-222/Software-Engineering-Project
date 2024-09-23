@@ -1,7 +1,9 @@
 package factorapi;
 
+import java.util.List; 
+
 public interface ReadResponse {
 
-	public static final String data = "";
+	public static List<Integer> data = null;
 	
 }
