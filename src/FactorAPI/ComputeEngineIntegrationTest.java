@@ -3,7 +3,6 @@ package factorapi;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ComputeEngineIntegrationTest {
@@ -20,10 +19,12 @@ public class ComputeEngineIntegrationTest {
         ComputeEngine computeEngine = new ComputeEngineImpl();
 
         computeEngine.initializeJob(request);
-        computeEngine.executeJob(request);
+        List<String> result = computeEngine.executeJob(request); // Modify to return a result
+        
+        dataStore.write(result); // Write result to the data store
+        dataStore.processData(); // Simulate processing, if needed
 
-        dataStore.processData(); // Simulate processing
-
-        assertEquals("Processed: [1, 10, 25]", outputList.get(0)); // Test should fail since the method returns an empty string
+        List<String> finalOutput = dataStore.getOutputConfig().getOutputList();
+        assertEquals("Processed: [1, 10, 25]", finalOutput.get(0)); // Check final output
     }
 }
