@@ -6,8 +6,11 @@ public class StorageMemoryTest implements DataStorage {
 	public OutputTest output; 
 	
 
+	//Constructor will initialize its input/output, and set the input List
 	public StorageMemoryTest(List<Integers> input){
-		this.input.setData(input);
+		input = new InputTest(input);
+		// this.input.setData(input); 
+		output = new OutputTest();
 	}
 	
 	//returns the response which contains the data in a List
