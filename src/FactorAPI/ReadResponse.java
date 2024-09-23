@@ -2,6 +2,6 @@ package factorapi;
 
 public interface ReadResponse {
 
-	public static final String data = "";
+	public static final List<Integer> data;
 	
 }
