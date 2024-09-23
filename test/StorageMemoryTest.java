@@ -5,6 +5,10 @@ public class StorageMemoryTest implements DataStorage {
 	public InputTest input;
 	public OutputTest output; 
 	
+
+	public StorageMemoryTest(List<Integers> input){
+		this.input.setData(input);
+	}
 	
 	//returns the response which contains the data in a List
 	//readRequest doens't need any information in this case, since we're reading from test classes 
