@@ -1,5 +1,6 @@
-import factorapi.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+import factorapi.GetFactorRequestImpl;
 
 public class TestMain {
     public static void main(String[] args){
