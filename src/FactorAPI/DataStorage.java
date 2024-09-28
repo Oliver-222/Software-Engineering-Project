@@ -1,5 +1,8 @@
 package factorapi;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public interface DataStorage {
 
 	/**
@@ -7,8 +10,9 @@ public interface DataStorage {
 	 * @param source - general key to find where the data is
 	 * @return ReadResponse - will contain the input data 
 	 */
-	ReadResponse read(ReadRequest readRequest);
-	
-	WriteResponse write(WriteRequest writeRequest);
+	//Throwing exceptions for file reading
+	ReadResponse read(ReadRequest readRequest) throws FileNotFoundException;
+
+	WriteResponse write(WriteRequest writeRequest) throws IOException;
 	
 }
