@@ -31,9 +31,9 @@ public class DataStoreImpl implements DataStorage{
 		}
 		
 		//Lets us return the ReadResponse. Only contains the data List
-		DataReadResponse dRR = new DataReadResponse(readData);
+		DataReadResponse dataReadResponse = new DataReadResponse(readData);
 		
-		return dRR;
+		return dataReadResponse;
 
 	}
 
@@ -55,9 +55,9 @@ public class DataStoreImpl implements DataStorage{
 			fw.write(writeIterator.next());
 		}
 		
-		WriteResponse wR = new DataWriteResponse();
+		WriteResponse writeResponse = new DataWriteResponse();
 		
-		return wR;
+		return writeResponse;
 	}
 
 }
