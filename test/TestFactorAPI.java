@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestFactorAPI {
     @Test
-    public void TestProcessRequestReturnsSuccess(){
+    public void testProcessRequestReturnsSuccess(){
         ArrayList<Integer> factors = new ArrayList<>();
         factors.add(4);
         factors.add(6);
