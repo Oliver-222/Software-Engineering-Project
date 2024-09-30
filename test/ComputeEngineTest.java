@@ -11,7 +11,7 @@ public class ComputeEngineTest {
         ComputeRequest mockRequest = mock(ComputeRequest.class);
         ComputeEngine computeEngine = new ComputeEngineImpl();
 
-        String response = computeEngine.initializeJob(mockRequest);
+        String response = computeEngine.executeJob(mockRequest);
         assertEquals("", response); // Test should fail since the method returns an empty string
     }
 
