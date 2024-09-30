@@ -34,7 +34,7 @@ public class StorageMemoryTest{
 
 	public WriteResponse write(List<String> result){
 		output.setData(result);
-		
+		return (WriteResponse) output;
 	}
 
 }
