@@ -32,9 +32,9 @@ public class TestDataStorage {
 			fail();
 		}
 		
-//		if(!mockWrite.getStatus()) {
-//			fail();
-//		}
+		if(!mockWrite.getStatus().equals(WriteResponse.WriteResponseStatus.SUCCESS)) {
+			fail();
+		}
 		
 	}
 	
