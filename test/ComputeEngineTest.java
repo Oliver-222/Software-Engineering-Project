@@ -1,5 +1,6 @@
 import factorapi.ComputeEngine;
-import factorapi.ComputeJobRequest;
+import factorapi.ComputeEngineImpl;
+import factorapi.ComputeRequest;
 import org.junit.jupiter.api.Test;
 import static org.mockito.Mockito.mock;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ComputeEngineTest {
     @Test
     void testInitializeJob() {
-        ComputeJobRequest mockRequest = mock(ComputeJobRequest.class);
+        ComputeRequest mockRequest = mock(ComputeRequest.class);
         ComputeEngine computeEngine = new ComputeEngineImpl();
 
         String response = computeEngine.initializeJob(mockRequest);
@@ -16,7 +17,7 @@ public class ComputeEngineTest {
 
     @Test
     void testExecuteJob() {
-        ComputeJobRequest mockRequest = mock(ComputeJobRequest.class);
+        ComputeRequest mockRequest = mock(ComputeRequest.class);
         ComputeEngine computeEngine = new ComputeEngineImpl();
 
         String response = computeEngine.executeJob(mockRequest);

@@ -7,13 +7,11 @@ public class DataWriteResponse implements WriteResponse{
 	}
 
 	@Override
-	public WriteStatus getWriteStatus() {
+	public WriteResponseStatus getStatus() {
 		// TODO Auto-generated method stub
 		
 		//Can always be success, would throw exception otherwise 
-		return WriteStatus.SUCCESS;
+		return WriteResponseStatus.SUCCESS;
 	}
-	
-	
 
 }

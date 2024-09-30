@@ -1,15 +1,15 @@
 import java.util.List;
+import factorapi.WriteResponse;
 
-public class OutputTest implements WriteResponse{
+
+public class OutputTest{
 
 	public List<String> data = null;
 
 	public OutputTest(){
 
 	}
-	
-	@Override
-	public WriteStatus getWriteStatus() {
+	public WriteResponse getWriteStatus() {
 		return null;
 	}
 

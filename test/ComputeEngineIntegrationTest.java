@@ -1,6 +1,5 @@
 import factorapi.ComputeEngine;
 import factorapi.ComputeJobRequest;
-import factorapi.ComputeJobRequestImpl;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;

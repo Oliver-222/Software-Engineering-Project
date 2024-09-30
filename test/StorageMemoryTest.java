@@ -1,9 +1,10 @@
-
-
-public class StorageMemoryTest implements DataStorage {
-
+import factorapi.ReadResponse;
+import factorapi.ReadRequest;
+import factorapi.WriteRequest;
+import factorapi.WriteResponse;
+public class StorageMemoryTest{
 	public InputTest input;
-	public OutputTest output; 
+	public OutputTest output;
 	
 
 	//Constructor will initialize its input/output, and set the input List
@@ -24,7 +25,6 @@ public class StorageMemoryTest implements DataStorage {
 	
 	//Returns the response which contains the output data 
 	//writeRequest will contain a List<String>
-	@Override
 	public WriteResponse write(WriteRequest writeRequest) {
 		// TODO Auto-generated method stub
 		return output;
@@ -34,6 +34,5 @@ public class StorageMemoryTest implements DataStorage {
 		output.setData(result);
 		
 	}
-	
 
 }
