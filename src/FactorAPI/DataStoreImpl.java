@@ -39,23 +39,25 @@ public class DataStoreImpl implements DataStorage{
 
 	@Override
 	public WriteResponse write(WriteRequest writeRequest) throws IOException {
+		WriteResponse writeResponse;
+
 		//Make a new file instance to be called by next line
 		File writeFile = new File(writeRequest.destination);
 		//If the file exists, does nothing. if not, creates a new file with the specified name. 
 		//Returns a boolean that I don't care about, at least for right now. 
 		writeFile.createNewFile();
 		
-		//Writes things to the specified file 
-		FileWriter fw = new FileWriter(writeFile);
-		
-		//To iterate over potentially large amounts of data from the compute engine. 
-		Iterator<Integer> writeIterator = writeRequest.writeData.iterator();
-		
-		while(writeIterator.hasNext()) {
-			fw.write(writeIterator.next());
+		//Writes things to the specified file and automatically closes FileWriter
+		try(FileWriter fw = new FileWriter(writeFile);){
+			//To iterate over potentially large amounts of data from the compute engine.
+			Iterator<Integer> writeIterator = writeRequest.writeData.iterator();
+
+			while(writeIterator.hasNext()) {
+				fw.write(writeIterator.next());
+			}
+
+			writeResponse = new DataWriteResponse();
 		}
-		
-		WriteResponse writeResponse = new DataWriteResponse();
 		
 		return writeResponse;
 	}

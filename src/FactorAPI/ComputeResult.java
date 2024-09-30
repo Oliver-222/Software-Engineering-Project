@@ -1,22 +1,14 @@
 package factorapi;
-public interface ComputeResult {
-    static ComputeResult SUCCESS = () -> ComputeResultStatus.SUCCESS;
-    static ComputeResult FAILURE = () -> ComputeResultStatus.FAILURE;
+public enum ComputeResult {
+    SUCCESS(true), FAILURE(false);
+    private boolean isSuccess;
 
-    ComputeResultStatus getStatus();
+    private ComputeResult(boolean isSuccess) {
+        this.isSuccess = isSuccess;
+    }
 
-    public static enum ComputeResultStatus {
-        SUCCESS(true),
-        FAILURE(false);
-
-        private final boolean success;
-
-        private ComputeResultStatus(boolean success) {
-            this.success = success;
-        }
-
-        public boolean isSuccess() {
-            return success;
-        }
+    public boolean isSuccess() {
+        return isSuccess;
     }
 }
+
