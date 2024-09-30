@@ -14,7 +14,7 @@ public class TestDataStorage {
 	@Test
 	public void testDataStorage(DataStorage ds) {
 		
-		GetFactorRequest factorRequest = new GetFactorRequest();
+		GetFactorRequest factorRequest = Mockito.mock(GetFactorRequest.class);
 		
 		//Will send the DataStorage a read request with the required information. Will receive a response with the input data. 
 		ReadResponse readResponse = ds.read(new ReadRequest(factorRequest));
