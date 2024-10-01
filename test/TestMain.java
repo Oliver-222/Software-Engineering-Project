@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import factorapi.ComputeRequest;
 import factorapi.GetFactorRequestImpl;
 
 public class TestMain {
@@ -32,7 +34,6 @@ public class TestMain {
         String testDestination = sc.next();
 
         GetFactorRequestImpl testFactorRequest = new GetFactorRequestImpl(testFactorList,testDelimiter,testSource,testDestination);
-
         /* TODO: create a testComputeJobRequest using components from testFactorRequest,
                  then run it through the compute engine and data storage,
                  then return results to user.

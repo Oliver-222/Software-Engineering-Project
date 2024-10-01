@@ -1,18 +1,20 @@
 import factorapi.GetFactorRequest;
 import factorapi.ReadResponse;
-import factorapi.WriteResponse; 
-import factorapi.DataStorage; 
+import factorapi.WriteResponse;
+import factorapi.DataStorage;
+import factorapi.ReadRequest;
 import org.mockito.Mockito;
-import org.junit.api.Assertions.fail;
-import org.mockito.Mockito.when;
-import org.junit.jupiter.api.Test; 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+import java.io.FileNotFoundException;
+
+import static org.junit.Assert.fail;
 
 public class TestDataStorage {
 
 	
 	@Test
-	public void testDataStorage(DataStorage ds) {
+	public void testDataStorage(DataStorage ds) throws FileNotFoundException {
 		
 		GetFactorRequest factorRequest = Mockito.mock(GetFactorRequest.class);
 		
@@ -30,7 +32,7 @@ public class TestDataStorage {
 			fail();
 		}
 		
-		if(!mockWrite.getWriteStatus() ) {
+		if(!mockWrite.getStatus().equals(WriteResponse.WriteResponseStatus.SUCCESS)) {
 			fail();
 		}
 		

@@ -1,8 +1,10 @@
 package factorapi;
 
+import java.io.IOException;
+
 public class DataStoragePrototype {
 
-	public void prototype(DataStorage ds) {
+	public void prototype(DataStorage ds) throws IOException {
 		
 		GetFactorRequest factorRequest = new GetFactorRequestImpl(null,null,null, null);
 		
