@@ -6,34 +6,44 @@ package factorapi;
 //    String getComputationType();
 //}
 
+import java.util.ArrayList;
+
 public class ComputeRequest {
 
-    private static final char DEFAULT_DELIMITER = ';';
+    private static final String DEFAULT_DELIMITER = ";";
+    ArrayList<Integer> factors;
+    String delimiter;
+    String source;
+    String destination;
 
-    private final InputConfig inputConfig;
-    private final OutputConfig outputConfig;
-    private final char delimiter;
 
-    public ComputeRequest(InputConfig inputConfig, OutputConfig outputConfig) {
-        this(inputConfig, outputConfig, DEFAULT_DELIMITER); // default delimiter: ;
-    }
-
-    public ComputeRequest(InputConfig inputConfig, OutputConfig outputConfig, char delimiter) {
-        this.inputConfig = inputConfig;
-        this.outputConfig = outputConfig;
+    public ComputeRequest(ArrayList<Integer> factors, String delimiter, String source, String destination){
+        this.factors = factors;
         this.delimiter = delimiter;
+        this.source = source;
+        this.destination = destination;
     }
 
-    public char getDelimiter() {
+    public ComputeRequest(ArrayList<Integer> factors, String source, String destination){
+        this.factors = factors;
+        this.delimiter = DEFAULT_DELIMITER;
+        this.source = source;
+        this.destination = destination;
+    }
+    public String getDelimiter() {
         return delimiter;
     }
 
-    public InputConfig getInputConfig() {
-        return inputConfig;
+    public ArrayList<Integer> getFactors() {
+        return factors;
     }
 
-    public OutputConfig getOutputConfig() {
-        return outputConfig;
+    public String getSource() {
+        return source;
+    }
+
+    public String getDestination() {
+        return destination;
     }
 }
 
