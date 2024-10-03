@@ -3,12 +3,11 @@ package factorapi;
 import java.util.ArrayList;
 
 public class GetFactorRequestImpl implements GetFactorRequest {
+    private static final String DEFAULT_DELIMITER = ";";
     ArrayList<Integer> factors;
     String delimiter;
     String source;
     String destination;
-    String DEFAULT_DELIMITER = ":";
-
     public GetFactorRequestImpl(ArrayList<Integer> factors, String delimiter, String source, String destination) {
         this.factors = factors;
         this.delimiter = delimiter;
