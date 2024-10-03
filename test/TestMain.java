@@ -17,16 +17,19 @@ public class TestMain {
                 if (tempValue == 000) {
                     break;
                 }
+                    if(tempValue < 0) {
+                        throw new IllegalArgumentException("nvalid input. Please enter a positive integer.");
+                    }
                 testFactorList.add(tempValue);
                 System.out.println(testFactorList);
             } catch (Exception e) {
-                System.out.println("Invalid input. Please enter an integer.");
+                System.out.println("Invalid input. Please enter a positive integer.");
                 sc.next(); // Clear the invalid input
             }
-        }
-        if (testFactorList.isEmpty()) {
-            System.out.println("No factors provided. Exiting.");
-            return;
+            if (testFactorList.isEmpty()) {
+                System.out.println("No factors provided. Exiting.");
+                return;
+            }
         }
 
         //inputs via scanner for now, for test.
