@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import factorapi.ComputeEngineImpl;
 import factorapi.ComputeRequest;
 import factorapi.GetFactorRequestImpl;
 
@@ -10,16 +10,29 @@ public class TestMain {
         System.out.println("Enter your numbers to factor (When finished, enter 000): ");
         Scanner sc = new Scanner(System.in);
         int tempValue = -1;
-        while (tempValue != 000 ){
-            tempValue = sc.nextInt();
-            if(tempValue == 000){
-                break;
+        // Check to make sure the input is an integer
+        while (true) {
+            try {
+                tempValue = sc.nextInt();
+                if (tempValue == 000) {
+                    break;
+                }
+                    if(tempValue < 0) {
+                        throw new IllegalArgumentException("nvalid input. Please enter a positive integer.");
+                    }
+                testFactorList.add(tempValue);
+                System.out.println(testFactorList);
+            } catch (Exception e) {
+                System.out.println("Invalid input. Please enter a positive integer.");
+                sc.next(); // Clear the invalid input
             }
-            testFactorList.add(tempValue);
-            System.out.println(testFactorList);
+            if (testFactorList.isEmpty()) {
+                System.out.println("No factors provided. Exiting.");
+                return;
+            }
         }
 
-        //inputs for now, for test.
+        //inputs via scanner for now, for test.
         //can be changed to read from a file in the future
 
         System.out.println("Numbers to be factored: "+testFactorList);
@@ -34,10 +47,18 @@ public class TestMain {
         String testDestination = sc.next();
 
         GetFactorRequestImpl testFactorRequest = new GetFactorRequestImpl(testFactorList,testDelimiter,testSource,testDestination);
-        /* TODO: create a testComputeJobRequest using components from testFactorRequest,
-                 then run it through the compute engine and data storage,
-                 then return results to user.
-         */
+        ComputeRequest testComputeRequest = new ComputeRequest(testFactorRequest.getFactors(), testFactorRequest.getDelimiter(), testFactorRequest.getSource(), testFactorRequest.getDestination());
+        ComputeEngineImpl testComputeEngine = new ComputeEngineImpl(testComputeRequest);
 
+        try {
+            String finalResult = testComputeEngine.executeJob(testComputeRequest);
+            System.out.println("Final Result: " + finalResult);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("An unexpected error occurred: " + e.getMessage());
+        } finally {
+            sc.close();
+        }
     }
 }
