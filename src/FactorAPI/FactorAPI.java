@@ -1,6 +1,8 @@
 package factorapi;
-public class FactorAPI {
-    public GetFactorResponse processRequest(GetFactorRequest factorRequest) {
-        return new GetFactorResponseImpl(GetFactorResponse.GetFactorStatus.SUCCESS);
-    }
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public interface FactorAPI{
+    public GetFactorResponse processRequest(GetFactorRequest factorRequest) throws FileNotFoundException, IOException;
 }
