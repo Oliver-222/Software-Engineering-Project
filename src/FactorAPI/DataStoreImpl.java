@@ -14,6 +14,10 @@ public class DataStoreImpl implements DataStorage{
 	
 	@Override
 	public ReadResponse read(ReadRequest readRequest) throws FileNotFoundException {
+
+		if(readRequest == null){
+			throw new IllegalArgumentException("Cannot have null read request.");
+		}
 		
 		//File object for the specified source file name. Throws exception if the file doesn't exist.
 		File readFile = new File(readRequest.source);
@@ -39,6 +43,11 @@ public class DataStoreImpl implements DataStorage{
 
 	@Override
 	public WriteResponse write(WriteRequest writeRequest) throws IOException {
+
+		if(writeRequest == null){
+			throw new IllegalArgumentException("Cannot have null write request.");
+		}
+		
 		WriteResponse writeResponse;
 
 		//Make a new file instance to be called by next line
