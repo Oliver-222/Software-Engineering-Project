@@ -7,6 +7,10 @@ import java.util.ArrayList;
 public class FactorAPI {
     public GetFactorResponse processRequest(GetFactorRequest factorRequest) throws FileNotFoundException, IOException {
 		// TODO Auto-generated method stub
+	    	//I think this is all that's necessary since GetFactorRequest has validation for each of its parameters. 
+	    	if(factorRequest == null){
+			throw new IllegalArgumentException("Cannot have null factor request.");
+		}
 		
 		//Holds the source information
 		ReadRequest readRequest = new ReadRequest(factorRequest);
