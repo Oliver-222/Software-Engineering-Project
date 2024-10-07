@@ -19,7 +19,7 @@ public class FactorAPIImpl implements FactorAPI{
 		
 		//Necessary objects before the computation
 		ComputeRequest computeRequest = new ComputeRequest((ArrayList<Integer>) readResponse.getData(), factorRequest.getSource(), factorRequest.getDestination());
-		ComputeEngine computeEngine = new ComputeEngineImpl(computeRequest);
+		ComputeEngineImpl computeEngine = new ComputeEngineImpl(computeRequest);
 		
 		//Make the engine find the result of our input
 		String data = computeEngine.executeJob(computeRequest);
