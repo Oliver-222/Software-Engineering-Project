@@ -14,6 +14,10 @@ public class DataStoreImpl implements DataStorage{
 	
 	@Override
 	public ReadResponse read(ReadRequest readRequest) throws FileNotFoundException {
+
+		if(readRequest == null){
+			throw new IllegalArgumentException("Cannot have null read request.");
+		}
 		
 		//File object for the specified source file name. Throws exception if the file doesn't exist.
 		File readFile = new File(readRequest.source);
@@ -39,6 +43,11 @@ public class DataStoreImpl implements DataStorage{
 
 	@Override
 	public WriteResponse write(WriteRequest writeRequest) throws IOException {
+
+		if(writeRequest == null){
+			throw new IllegalArgumentException("Cannot have null write request.");
+		}
+		
 		WriteResponse writeResponse;
 
 		//Make a new file instance to be called by next line
@@ -49,15 +58,12 @@ public class DataStoreImpl implements DataStorage{
 		
 		//Writes things to the specified file and automatically closes FileWriter
 		try(FileWriter fw = new FileWriter(writeFile);){
-			//To iterate over potentially large amounts of data from the compute engine.
-			Iterator<Integer> writeIterator = writeRequest.writeData.iterator();
-
-			while(writeIterator.hasNext()) {
-				fw.write(writeIterator.next());
-			}
+			fw.write(writeRequest.writeData);
 
 			writeResponse = new DataWriteResponse();
+			fw.close();
 		}
+		
 		
 		return writeResponse;
 	}
