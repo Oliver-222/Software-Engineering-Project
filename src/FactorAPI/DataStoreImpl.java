@@ -62,6 +62,7 @@ public class DataStoreImpl implements DataStorage{
 
 			writeResponse = new DataWriteResponse();
 		}
+		fw.close();
 		
 		return writeResponse;
 	}
