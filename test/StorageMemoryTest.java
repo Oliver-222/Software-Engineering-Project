@@ -11,8 +11,8 @@ public class StorageMemoryTest{
 	
 
 	//Constructor will initialize its input/output, and set the input List
-	public StorageMemoryTest(List<Integer> input){
-		input = (List<Integer>) new InputTest(input);
+	public StorageMemoryTest(List<Integer> data){
+		InputTest input =  new InputTest(data);
 		// this.input.setData(input); 
 		output = new OutputTest();
 	}
