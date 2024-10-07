@@ -49,12 +49,7 @@ public class DataStoreImpl implements DataStorage{
 		
 		//Writes things to the specified file and automatically closes FileWriter
 		try(FileWriter fw = new FileWriter(writeFile);){
-			//To iterate over potentially large amounts of data from the compute engine.
-			Iterator<Integer> writeIterator = writeRequest.writeData.iterator();
-
-			while(writeIterator.hasNext()) {
-				fw.write(writeIterator.next());
-			}
+			fw.write(writeRequest.writeData);
 
 			writeResponse = new DataWriteResponse();
 		}
