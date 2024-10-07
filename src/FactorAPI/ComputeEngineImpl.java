@@ -3,7 +3,7 @@ package factorapi;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class ComputeEngineImpl implements ComputeEngine {
+public class ComputeEngineImpl{
     private ComputeRequest request;
 
     public ComputeEngineImpl(ComputeRequest request) {
