@@ -4,12 +4,14 @@ import factorapi.GetFactorResponse;
 import factorapi.GetFactorResponseImpl;
 import org.junit.jupiter.api.Test;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestFactorAPI {
     @Test
-    public void testProcessRequestReturnsSuccess(){
+    public void testProcessRequestReturnsSuccess() throws FileNotFoundException, IOException{
         ArrayList<Integer> factors = new ArrayList<>();
         factors.add(4);
         factors.add(6);
