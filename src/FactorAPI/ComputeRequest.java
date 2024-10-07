@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class ComputeRequest {
 
-    private static final char DEFAULT_DELIMITER = ';';
+    private static final String DEFAULT_DELIMITER = ";";
 
     ArrayList<Integer> factors;
     String delimiter;
@@ -31,7 +31,7 @@ public class ComputeRequest {
         this.destination = destination;
     }
 
-    public char getDelimiter() {
+    public String getDelimiter() {
         return delimiter;
     }
 
