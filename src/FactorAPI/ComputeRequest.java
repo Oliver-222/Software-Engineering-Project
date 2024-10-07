@@ -11,11 +11,11 @@ import java.util.ArrayList;
 public class ComputeRequest {
 
     private static final String DEFAULT_DELIMITER = ";";
-
     ArrayList<Integer> factors;
     String delimiter;
     String source;
     String destination;
+
 
     public ComputeRequest(ArrayList<Integer> factors, String delimiter, String source, String destination){
         this.factors = factors;
@@ -30,7 +30,6 @@ public class ComputeRequest {
         this.source = source;
         this.destination = destination;
     }
-
     public String getDelimiter() {
         return delimiter;
     }
@@ -46,8 +45,5 @@ public class ComputeRequest {
     public String getDestination() {
         return destination;
     }
-
-    
 }
 
-  
