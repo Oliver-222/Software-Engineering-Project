@@ -5,9 +5,10 @@ import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.fail;
 import static org.mockito.Mockito.when;
 import org.junit.jupiter.api.Test;
+import java.io.FileNotFoundException;
 public class TestGetFactorResponse {
       @Test
-      public void testSuccessfulResponse(){
+      public void testSuccessfulResponse() throws FileNotFoundException{
         FactorAPI mockApi = Mockito.mock(FactorAPI.class);
         GetFactorRequest mockReq = Mockito.mock(GetFactorRequest.class);
         GetFactorResponse mockResp = Mockito.mock(GetFactorResponse.class);
