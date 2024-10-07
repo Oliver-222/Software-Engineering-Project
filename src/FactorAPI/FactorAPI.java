@@ -1,6 +1,8 @@
 package factorapi;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class FactorAPI {
     public GetFactorResponse processRequest(GetFactorRequest factorRequest) throws FileNotFoundException, IOException {
