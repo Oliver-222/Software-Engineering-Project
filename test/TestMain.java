@@ -3,8 +3,9 @@ import java.util.Scanner;
 import factorapi.ComputeEngineImpl;
 import factorapi.ComputeRequest;
 import factorapi.GetFactorRequestImpl;
-
+import org.junit.jupiter.api.Test;
 public class TestMain {
+    @Test
     public static void main(String[] args){
         ArrayList<Integer> testFactorList = new ArrayList<>();
         System.out.println("Enter your numbers to factor (When finished, enter 000): ");
