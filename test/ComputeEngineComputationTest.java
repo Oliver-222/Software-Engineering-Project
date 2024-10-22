@@ -4,9 +4,10 @@ import factorapi.ComputeEngineImpl;
 import factorapi.ComputeRequest;
 import factorapi.GetFactorRequestImpl;
 import org.junit.jupiter.api.Test;
-public class TestMain {
+public class ComputeEngineComputationTest {
+    //This test tests the computation part of the compute engine and does not focus on reading or writing data
     @Test
-    public static void main(String[] args){
+    public static void testComputeEngine(String[] args){
         ArrayList<Integer> testFactorList = new ArrayList<>();
         System.out.println("Enter your numbers to factor (When finished, enter 000): ");
         Scanner sc = new Scanner(System.in);
