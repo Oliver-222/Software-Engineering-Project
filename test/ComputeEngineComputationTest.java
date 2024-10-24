@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class ComputeEngineComputationTest {
     //This test tests the computation part of the compute engine and does not focus on reading or writing data
     @Test
-    public static void testComputeEngine(String[] args){
+    public static void testComputeEngine(){
         ArrayList<Integer> testFactorList = new ArrayList<>();
         System.out.println("Enter your numbers to factor (When finished, enter 000): ");
         Scanner sc = new Scanner(System.in);
@@ -50,7 +50,7 @@ public class ComputeEngineComputationTest {
 
         GetFactorRequestImpl testFactorRequest = new GetFactorRequestImpl(testFactorList,testDelimiter,testSource,testDestination);
         ComputeRequest testComputeRequest = new ComputeRequest(testFactorRequest.getFactors(), testFactorRequest.getDelimiter(), testFactorRequest.getSource(), testFactorRequest.getDestination());
-        ComputeEngineImpl testComputeEngine = new ComputeEngineImpl(testComputeRequest);
+        ComputeEngineImpl testComputeEngine = new ComputeEngineImpl();
 
         try {
             String finalResult = testComputeEngine.executeJob(testComputeRequest);

@@ -13,7 +13,7 @@ public class FactorAPI {
 		}
 			DataStoreImpl dataStore = new DataStoreImpl();
 			ComputeRequest computeRequest = new ComputeRequest(factorRequest);
-			ComputeEngineImpl computeEngine = new ComputeEngineImpl(computeRequest);
+			ComputeEngineImpl computeEngine = new ComputeEngineImpl();
 			CoordinatorImpl coordinator = new CoordinatorImpl(dataStore, computeEngine);
 			ComputeResult result = coordinator.compute(computeRequest);
 			if(!result.isSuccess()){

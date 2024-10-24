@@ -17,7 +17,7 @@ public class ComputeEngineTest {
         ComputeRequest testRequest = new ComputeRequest(testArray,":", "source", "destination");
 
         //Create new compute Engine using the testRequest
-        ComputeEngine computeEngine = new ComputeEngineImpl(testRequest);
+        ComputeEngine computeEngine = new ComputeEngineImpl();
         String response = computeEngine.executeJob(testRequest);
 
         //Check if response is what is expected
