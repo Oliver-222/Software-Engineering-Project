@@ -1,4 +1,6 @@
-import factorapi.*;
+import factorapi.CoordinatorImpl;
+import factorapi.GetFactorRequestImpl;
+import factorapi.ComputeRequest;
 
 import java.io.File;
 import java.io.FileNotFoundException;
