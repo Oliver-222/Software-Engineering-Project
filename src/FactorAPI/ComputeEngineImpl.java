@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class ComputeEngineImpl implements ComputeEngine {
-    private ComputeRequest request;
-
-    public ComputeEngineImpl(ComputeRequest request) {
-        this.request = request;
-    }
 
     public String executeJob(ComputeRequest request) {
         ArrayList<Integer> factorList = request.factors;

@@ -1,7 +1,9 @@
 package factorapi;
-
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
-
 public class GetFactorRequestImpl implements GetFactorRequest {
     private static final String DEFAULT_DELIMITER = ";";
     ArrayList<Integer> factors;
@@ -17,6 +19,13 @@ public class GetFactorRequestImpl implements GetFactorRequest {
     public GetFactorRequestImpl(ArrayList<Integer> factors, String source, String destination) {
         this.factors = factors;
         this.delimiter = DEFAULT_DELIMITER;
+        this.source = source;
+        this.destination = destination;
+    }
+    public GetFactorRequestImpl(String delimiter, String source, String destination) throws FileNotFoundException {
+
+        this.factors = readIntegersFromFile(source);
+        this.delimiter = delimiter;
         this.source = source;
         this.destination = destination;
     }
@@ -46,5 +55,26 @@ public class GetFactorRequestImpl implements GetFactorRequest {
             throw new IllegalArgumentException("Destination cannot be null.");
         }
         return destination;
+    }
+    private static ArrayList<Integer> readIntegersFromFile(String source) {
+        ArrayList<Integer> factors = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(source))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split(",");
+                for (String part : parts) {
+                    try {
+                        factors.add(Integer.parseInt(part.trim()));
+                    } catch (NumberFormatException e) {
+                        //Handles the case where there is a non-integer
+                        System.out.println("Skipping non-integer part: " + part);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace(); // Handle file reading errors
+        }
+        return factors;
     }
 }
