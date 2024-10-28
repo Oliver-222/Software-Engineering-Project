@@ -12,7 +12,7 @@ public class DataStoreImpl implements DataStorage{
 
 	
 	@Override
-	public ReadResponse read(ReadRequest readRequest) throws FileNotFoundException {
+	public ReadResponse read(ReadRequest readRequest) {
 
 		ArrayList<Integer> readData = (ArrayList<Integer>) readHelper(readRequest);
 		
