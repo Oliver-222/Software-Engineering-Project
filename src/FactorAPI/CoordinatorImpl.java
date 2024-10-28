@@ -33,13 +33,14 @@ public class CoordinatorImpl implements ComputationCoordinator {
             Callable<ComputeResult> user = () -> {
                 String factors = ce.executeJob(request);
                 ds.write(new WriteRequest(request, factors));
-                return new ComputeResult(ComputeResult.ComputeResultStatus.SUCCESS, "Success!");
+                
             };
             ExecutorService threadPool = Executors.newFixedThreadPool(nthreads);
             for(int i = 0; i < nthreads; i++){
                 threadPool.submit(user); 
             }
 
+            return new ComputeResult(ComputeResult.ComputeResultStatus.SUCCESS, "Success!");
         } catch (Exception e) {
             return new ComputeResult(ComputeResult.ComputeResultStatus.FAILURE, "Unexpected failure: " + e.getMessage());
         }
