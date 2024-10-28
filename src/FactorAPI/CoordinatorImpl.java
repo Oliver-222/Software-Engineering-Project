@@ -2,11 +2,14 @@ package factorapi;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurent.ExecutorService;
+import java.util.concurrent.Executors; 
 
 public class CoordinatorImpl implements ComputationCoordinator {
 
     private final DataStorage ds;
     private final ComputeEngine ce;
+    int nthreads = 4; 
 
     public CoordinatorImpl(DataStorage ds, ComputeEngine ce) {
         this.ds = ds;
@@ -25,9 +28,17 @@ public class CoordinatorImpl implements ComputationCoordinator {
             // we'll immediately generate a NullPointerException in the for loop, then catch that and return 'failure'
             List<Integer> integers = request.getFactors() != null ? request.getFactors() : ds.read(new ReadRequest(request)).getData();
             ComputeRequest computeRequest = new ComputeRequest((ArrayList<Integer>) integers, request.getDelimiter(), request.source, request.destination);
-            String factors = ce.executeJob(request);
-            ds.write(new WriteRequest(request, factors));
-            return new ComputeResult(ComputeResult.ComputeResultStatus.SUCCESS, "Success!");
+
+            Callable<ComputeResult> user = () -> {
+                String factors = ce.executeJob(request);
+                ds.write(new WriteRequest(request, factors));
+                return new ComputeResult(ComputeResult.ComputeResultStatus.SUCCESS, "Success!");
+            };
+            ExecutorService threadPool = Executors.newFixedThreadPool(nthreads);
+            for(int i = 0; i < nthreads; i++){
+                threadPool.submit(user); 
+            }
+
         } catch (Exception e) {
             return new ComputeResult(ComputeResult.ComputeResultStatus.FAILURE, "Unexpected failure: " + e.getMessage());
         }
