@@ -119,9 +119,9 @@ public class DataStoreImpl implements DataStorage{
 	         * Using lambda syntax to create an instance of WriteResult. This is an alternative to the ComputeResult approach of providing
 	         * constants for success/failure.
 	         */
-	        return () -> WriteResponseStatus.SUCCESS; 
+	        return new WriteResponse(WriteResponseStatus.SUCCESS);
 	    } catch (Exception e) {
-	        return () -> WriteResponseStatus.FAILURE;
+	        return new WriteResponse(WriteResponseStatus.FAILURE);
 	    }
 	}
 
