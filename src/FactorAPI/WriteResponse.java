@@ -1,9 +1,16 @@
 package factorapi;
 
-public interface WriteResponse {
+public class WriteResponse {
+
+    private WriteResponseStatus status;
+
+    public WriteResponse(WriteResponseStatus status){
+        this.status = status; 
+    }    
+    
     public static enum WriteResponseStatus {
         SUCCESS,
         FAILURE;
     }
-    WriteResponseStatus getStatus();
+    
 }
