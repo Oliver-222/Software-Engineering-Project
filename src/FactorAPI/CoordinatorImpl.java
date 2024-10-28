@@ -33,7 +33,7 @@ public class CoordinatorImpl implements ComputationCoordinator {
             Callable<Void> user = () -> {
                 String factors = ce.executeJob(request);
                 ds.write(new WriteRequest(request, factors));
-                
+                return null;
             };
             ExecutorService threadPool = Executors.newFixedThreadPool(nthreads);
             for(int i = 0; i < nthreads; i++){
