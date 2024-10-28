@@ -30,6 +30,12 @@ public class ComputeRequest {
         this.source = source;
         this.destination = destination;
     }
+    public ComputeRequest(GetFactorRequest factorRequest){
+        this.factors = factorRequest.getFactors();
+        this.delimiter = factorRequest.getDelimiter();
+        this.source = factorRequest.getSource();
+        this.destination = factorRequest.getDestination();
+    }
     public String getDelimiter() {
         return delimiter;
     }
