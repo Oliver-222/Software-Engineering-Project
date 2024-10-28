@@ -30,7 +30,7 @@ public class CoordinatorImpl implements ComputationCoordinator {
             List<Integer> integers = request.getFactors() != null ? request.getFactors() : ds.read(new ReadRequest(request)).getData();
             ComputeRequest computeRequest = new ComputeRequest((ArrayList<Integer>) integers, request.getDelimiter(), request.source, request.destination);
 
-            Callable<ComputeResult> user = () -> {
+            Callable<Void> user = () -> {
                 String factors = ce.executeJob(request);
                 ds.write(new WriteRequest(request, factors));
                 
