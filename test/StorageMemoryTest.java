@@ -29,12 +29,12 @@ public class StorageMemoryTest{
 	//writeRequest will contain a List<String>
 	public WriteResponse write(WriteRequest writeRequest) {
 		//TODO Auto-generated method stub
-		return (WriteResponse) output;
+		return new WriteResponse();
 	}
 
 	public WriteResponse write(List<String> result){
 		output.setData(result);
-		return (WriteResponse) output;
+		return new WriteResponse();
 	}
 
 }
