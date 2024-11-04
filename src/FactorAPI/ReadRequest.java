@@ -9,5 +9,8 @@ public class ReadRequest {
 	public ReadRequest(ComputeRequest computeRequest) {
 		this.source = computeRequest.getSource();
 	}
+	public ReadRequest(String source){
+		this.source = source;
+	}
 	
 }
