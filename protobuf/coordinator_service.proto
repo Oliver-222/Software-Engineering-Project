@@ -1,0 +1,31 @@
+enum ComputeResultStatus {
+    SUCCESS = 0;
+    FAILURE = 1;
+    INVALID_REQUEST = 2;
+}
+
+message ComputeResult {
+    optional ComputeResultStatus status = 1;
+    optional string message = 2;
+}
+
+message ComputeRequest {
+    repeated int32 factors = 1;
+    optional string delimiter = 2;        
+    optional string source = 3;
+    optional string destination = 4;
+}
+
+message ReadRequest {
+    optional string source = 1;
+}
+
+message WriteRequest {
+    optional string destination = 1;
+    optional string writeData = 2;
+    optional string delimiter = 3;
+}
+
+service ComputationCoordinator {
+    rpc compute(ComputeRequest) returns (ComputeResult);
+}

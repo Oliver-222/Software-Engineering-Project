@@ -23,7 +23,6 @@ public class GetFactorRequestImpl implements GetFactorRequest {
         this.destination = destination;
     }
     public GetFactorRequestImpl(String delimiter, String source, String destination) throws FileNotFoundException {
-
         this.factors = readIntegersFromFile(source);
         this.delimiter = delimiter;
         this.source = source;

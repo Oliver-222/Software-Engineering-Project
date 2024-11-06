@@ -17,8 +17,8 @@ public class FactorAPI {
 			CoordinatorImpl coordinator = new CoordinatorImpl(dataStore, computeEngine);
 			ComputeResult result = coordinator.compute(computeRequest);
 			if(!result.isSuccess()){
-				return new GetFactorResponseImpl(GetFactorResponse.GetFactorStatus.FAILURE);
+				return new GetFactorResponseImpl(GetFactorResponse.GetFactorStatus.FAILURE, "Failure");
 			}
-			return new GetFactorResponseImpl(GetFactorResponse.GetFactorStatus.SUCCESS);
+			return new GetFactorResponseImpl(GetFactorResponse.GetFactorStatus.SUCCESS, "Success");
 	}
 }

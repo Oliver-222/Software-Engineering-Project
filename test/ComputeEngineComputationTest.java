@@ -20,7 +20,7 @@ public class ComputeEngineComputationTest {
                     break;
                 }
                     if(tempValue < 0) {
-                        throw new IllegalArgumentException("nvalid input. Please enter a positive integer.");
+                        throw new IllegalArgumentException("Invalid input. Please enter a positive integer.");
                     }
                 testFactorList.add(tempValue);
                 System.out.println(testFactorList);

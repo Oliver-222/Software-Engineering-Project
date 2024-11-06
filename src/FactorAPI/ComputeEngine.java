@@ -1,8 +1,11 @@
 package factorapi;
 
 
+import service.CoordinatorService;
+
 public interface ComputeEngine {
-    String executeJob(ComputeRequest request);
+    String executeJob(ComputeRequest computeRequest);
+    String executeJob(CoordinatorService.ComputeRequest computeRequest);
 }
 
 

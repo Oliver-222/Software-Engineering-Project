@@ -1,6 +1,8 @@
 package factorapi;
 
 
+import service.CoordinatorService;
+
 public class WriteRequest {
 
 	//Will contain the result from the compute engine and the desired output location 
@@ -22,6 +24,11 @@ public class WriteRequest {
 		this.writeData = writeData; 
 		this.delimiter = computeRequest.getDelimiter();
 	}
-	
-	
+	public WriteRequest(CoordinatorService.ComputeRequest computeRequest, String writeData) {
+		this.destination = computeRequest.getDestination();
+		this.writeData = writeData;
+		this.delimiter = computeRequest.getDelimiter();
+	}
+
+
 }
