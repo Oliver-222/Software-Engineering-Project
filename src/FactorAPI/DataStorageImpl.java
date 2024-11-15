@@ -12,6 +12,10 @@ import datastore.DataStorageGrpc.DataStorageImplBase;
 public class DataStorageImpl extends DataStorageImplBase {
 
 	private DataStoreImpl dataStore; 
+
+	public DataStorageImpl() {
+		this(new DataStoreImpl());
+	}
 	
 	public DataStorageImpl(DataStoreImpl dataStore) {
 		this.dataStore = dataStore; 
