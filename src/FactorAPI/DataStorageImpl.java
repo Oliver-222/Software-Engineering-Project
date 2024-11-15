@@ -19,28 +19,12 @@ public class DataStorageImpl extends DataStorageImplBase {
 	
 	public ReadResponse read(ReadRequest readRequest) {
 
-		try {
-			return dataStore.read(readRequest);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Error in DS Server read");
-		}
-		
-		return null; 
+		return dataStore.read(readRequest);
 		
 	}
 	
 	public WriteResponse write(WriteRequest writeRequest) {
-		try {
-			return dataStore.write(writeRequest);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Error in DS Server write");
-		}
-		
-		return null; 
+		return dataStore.write(writeRequest);
 	}
 
 	
