@@ -2,7 +2,7 @@
 // source: datastore_service.proto
 
 // Protobuf Java Version: 3.25.1
-package factorapi;
+package datastore;
 
 public final class DatastoreService {
   private DatastoreService() {}
@@ -16,7 +16,7 @@ public final class DatastoreService {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code factorapi.WriteResponseStatus}
+   * Protobuf enum {@code datastore.WriteResponseStatus}
    */
   public enum WriteResponseStatus
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -88,7 +88,7 @@ public final class DatastoreService {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return factorapi.DatastoreService.getDescriptor().getEnumTypes().get(0);
+      return datastore.DatastoreService.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final WriteResponseStatus[] VALUES = values();
@@ -108,11 +108,11 @@ public final class DatastoreService {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:factorapi.WriteResponseStatus)
+    // @@protoc_insertion_point(enum_scope:datastore.WriteResponseStatus)
   }
 
   public interface ReadRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:factorapi.ReadRequest)
+      // @@protoc_insertion_point(interface_extends:datastore.ReadRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -133,11 +133,11 @@ public final class DatastoreService {
         getSourceBytes();
   }
   /**
-   * Protobuf type {@code factorapi.ReadRequest}
+   * Protobuf type {@code datastore.ReadRequest}
    */
   public static final class ReadRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:factorapi.ReadRequest)
+      // @@protoc_insertion_point(message_implements:datastore.ReadRequest)
       ReadRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ReadRequest.newBuilder() to construct.
@@ -157,15 +157,15 @@ public final class DatastoreService {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return factorapi.DatastoreService.internal_static_factorapi_ReadRequest_descriptor;
+      return datastore.DatastoreService.internal_static_datastore_ReadRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return factorapi.DatastoreService.internal_static_factorapi_ReadRequest_fieldAccessorTable
+      return datastore.DatastoreService.internal_static_datastore_ReadRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              factorapi.DatastoreService.ReadRequest.class, factorapi.DatastoreService.ReadRequest.Builder.class);
+              datastore.DatastoreService.ReadRequest.class, datastore.DatastoreService.ReadRequest.Builder.class);
     }
 
     private int bitField0_;
@@ -257,10 +257,10 @@ public final class DatastoreService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof factorapi.DatastoreService.ReadRequest)) {
+      if (!(obj instanceof datastore.DatastoreService.ReadRequest)) {
         return super.equals(obj);
       }
-      factorapi.DatastoreService.ReadRequest other = (factorapi.DatastoreService.ReadRequest) obj;
+      datastore.DatastoreService.ReadRequest other = (datastore.DatastoreService.ReadRequest) obj;
 
       if (hasSource() != other.hasSource()) return false;
       if (hasSource()) {
@@ -287,44 +287,44 @@ public final class DatastoreService {
       return hash;
     }
 
-    public static factorapi.DatastoreService.ReadRequest parseFrom(
+    public static datastore.DatastoreService.ReadRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(
+    public static datastore.DatastoreService.ReadRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(
+    public static datastore.DatastoreService.ReadRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(
+    public static datastore.DatastoreService.ReadRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(byte[] data)
+    public static datastore.DatastoreService.ReadRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(
+    public static datastore.DatastoreService.ReadRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(java.io.InputStream input)
+    public static datastore.DatastoreService.ReadRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(
+    public static datastore.DatastoreService.ReadRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -332,26 +332,26 @@ public final class DatastoreService {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static factorapi.DatastoreService.ReadRequest parseDelimitedFrom(java.io.InputStream input)
+    public static datastore.DatastoreService.ReadRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static factorapi.DatastoreService.ReadRequest parseDelimitedFrom(
+    public static datastore.DatastoreService.ReadRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(
+    public static datastore.DatastoreService.ReadRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static factorapi.DatastoreService.ReadRequest parseFrom(
+    public static datastore.DatastoreService.ReadRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -364,7 +364,7 @@ public final class DatastoreService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(factorapi.DatastoreService.ReadRequest prototype) {
+    public static Builder newBuilder(datastore.DatastoreService.ReadRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -380,26 +380,26 @@ public final class DatastoreService {
       return builder;
     }
     /**
-     * Protobuf type {@code factorapi.ReadRequest}
+     * Protobuf type {@code datastore.ReadRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:factorapi.ReadRequest)
-        factorapi.DatastoreService.ReadRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:datastore.ReadRequest)
+        datastore.DatastoreService.ReadRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return factorapi.DatastoreService.internal_static_factorapi_ReadRequest_descriptor;
+        return datastore.DatastoreService.internal_static_datastore_ReadRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return factorapi.DatastoreService.internal_static_factorapi_ReadRequest_fieldAccessorTable
+        return datastore.DatastoreService.internal_static_datastore_ReadRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                factorapi.DatastoreService.ReadRequest.class, factorapi.DatastoreService.ReadRequest.Builder.class);
+                datastore.DatastoreService.ReadRequest.class, datastore.DatastoreService.ReadRequest.Builder.class);
       }
 
-      // Construct using factorapi.DatastoreService.ReadRequest.newBuilder()
+      // Construct using datastore.DatastoreService.ReadRequest.newBuilder()
       private Builder() {
 
       }
@@ -420,17 +420,17 @@ public final class DatastoreService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return factorapi.DatastoreService.internal_static_factorapi_ReadRequest_descriptor;
+        return datastore.DatastoreService.internal_static_datastore_ReadRequest_descriptor;
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.ReadRequest getDefaultInstanceForType() {
-        return factorapi.DatastoreService.ReadRequest.getDefaultInstance();
+      public datastore.DatastoreService.ReadRequest getDefaultInstanceForType() {
+        return datastore.DatastoreService.ReadRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.ReadRequest build() {
-        factorapi.DatastoreService.ReadRequest result = buildPartial();
+      public datastore.DatastoreService.ReadRequest build() {
+        datastore.DatastoreService.ReadRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -438,14 +438,14 @@ public final class DatastoreService {
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.ReadRequest buildPartial() {
-        factorapi.DatastoreService.ReadRequest result = new factorapi.DatastoreService.ReadRequest(this);
+      public datastore.DatastoreService.ReadRequest buildPartial() {
+        datastore.DatastoreService.ReadRequest result = new datastore.DatastoreService.ReadRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(factorapi.DatastoreService.ReadRequest result) {
+      private void buildPartial0(datastore.DatastoreService.ReadRequest result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -489,16 +489,16 @@ public final class DatastoreService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof factorapi.DatastoreService.ReadRequest) {
-          return mergeFrom((factorapi.DatastoreService.ReadRequest)other);
+        if (other instanceof datastore.DatastoreService.ReadRequest) {
+          return mergeFrom((datastore.DatastoreService.ReadRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(factorapi.DatastoreService.ReadRequest other) {
-        if (other == factorapi.DatastoreService.ReadRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(datastore.DatastoreService.ReadRequest other) {
+        if (other == datastore.DatastoreService.ReadRequest.getDefaultInstance()) return this;
         if (other.hasSource()) {
           source_ = other.source_;
           bitField0_ |= 0x00000001;
@@ -644,16 +644,16 @@ public final class DatastoreService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:factorapi.ReadRequest)
+      // @@protoc_insertion_point(builder_scope:datastore.ReadRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:factorapi.ReadRequest)
-    private static final factorapi.DatastoreService.ReadRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:datastore.ReadRequest)
+    private static final datastore.DatastoreService.ReadRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new factorapi.DatastoreService.ReadRequest();
+      DEFAULT_INSTANCE = new datastore.DatastoreService.ReadRequest();
     }
 
-    public static factorapi.DatastoreService.ReadRequest getDefaultInstance() {
+    public static datastore.DatastoreService.ReadRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -689,14 +689,14 @@ public final class DatastoreService {
     }
 
     @java.lang.Override
-    public factorapi.DatastoreService.ReadRequest getDefaultInstanceForType() {
+    public datastore.DatastoreService.ReadRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface ReadResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:factorapi.ReadResponse)
+      // @@protoc_insertion_point(interface_extends:datastore.ReadResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -717,11 +717,11 @@ public final class DatastoreService {
     int getData(int index);
   }
   /**
-   * Protobuf type {@code factorapi.ReadResponse}
+   * Protobuf type {@code datastore.ReadResponse}
    */
   public static final class ReadResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:factorapi.ReadResponse)
+      // @@protoc_insertion_point(message_implements:datastore.ReadResponse)
       ReadResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use ReadResponse.newBuilder() to construct.
@@ -741,15 +741,15 @@ public final class DatastoreService {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return factorapi.DatastoreService.internal_static_factorapi_ReadResponse_descriptor;
+      return datastore.DatastoreService.internal_static_datastore_ReadResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return factorapi.DatastoreService.internal_static_factorapi_ReadResponse_fieldAccessorTable
+      return datastore.DatastoreService.internal_static_datastore_ReadResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              factorapi.DatastoreService.ReadResponse.class, factorapi.DatastoreService.ReadResponse.Builder.class);
+              datastore.DatastoreService.ReadResponse.class, datastore.DatastoreService.ReadResponse.Builder.class);
     }
 
     public static final int DATA_FIELD_NUMBER = 1;
@@ -826,10 +826,10 @@ public final class DatastoreService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof factorapi.DatastoreService.ReadResponse)) {
+      if (!(obj instanceof datastore.DatastoreService.ReadResponse)) {
         return super.equals(obj);
       }
-      factorapi.DatastoreService.ReadResponse other = (factorapi.DatastoreService.ReadResponse) obj;
+      datastore.DatastoreService.ReadResponse other = (datastore.DatastoreService.ReadResponse) obj;
 
       if (!getDataList()
           .equals(other.getDataList())) return false;
@@ -853,44 +853,44 @@ public final class DatastoreService {
       return hash;
     }
 
-    public static factorapi.DatastoreService.ReadResponse parseFrom(
+    public static datastore.DatastoreService.ReadResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(
+    public static datastore.DatastoreService.ReadResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(
+    public static datastore.DatastoreService.ReadResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(
+    public static datastore.DatastoreService.ReadResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(byte[] data)
+    public static datastore.DatastoreService.ReadResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(
+    public static datastore.DatastoreService.ReadResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(java.io.InputStream input)
+    public static datastore.DatastoreService.ReadResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(
+    public static datastore.DatastoreService.ReadResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -898,26 +898,26 @@ public final class DatastoreService {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static factorapi.DatastoreService.ReadResponse parseDelimitedFrom(java.io.InputStream input)
+    public static datastore.DatastoreService.ReadResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static factorapi.DatastoreService.ReadResponse parseDelimitedFrom(
+    public static datastore.DatastoreService.ReadResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(
+    public static datastore.DatastoreService.ReadResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static factorapi.DatastoreService.ReadResponse parseFrom(
+    public static datastore.DatastoreService.ReadResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -930,7 +930,7 @@ public final class DatastoreService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(factorapi.DatastoreService.ReadResponse prototype) {
+    public static Builder newBuilder(datastore.DatastoreService.ReadResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -946,26 +946,26 @@ public final class DatastoreService {
       return builder;
     }
     /**
-     * Protobuf type {@code factorapi.ReadResponse}
+     * Protobuf type {@code datastore.ReadResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:factorapi.ReadResponse)
-        factorapi.DatastoreService.ReadResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:datastore.ReadResponse)
+        datastore.DatastoreService.ReadResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return factorapi.DatastoreService.internal_static_factorapi_ReadResponse_descriptor;
+        return datastore.DatastoreService.internal_static_datastore_ReadResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return factorapi.DatastoreService.internal_static_factorapi_ReadResponse_fieldAccessorTable
+        return datastore.DatastoreService.internal_static_datastore_ReadResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                factorapi.DatastoreService.ReadResponse.class, factorapi.DatastoreService.ReadResponse.Builder.class);
+                datastore.DatastoreService.ReadResponse.class, datastore.DatastoreService.ReadResponse.Builder.class);
       }
 
-      // Construct using factorapi.DatastoreService.ReadResponse.newBuilder()
+      // Construct using datastore.DatastoreService.ReadResponse.newBuilder()
       private Builder() {
 
       }
@@ -986,17 +986,17 @@ public final class DatastoreService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return factorapi.DatastoreService.internal_static_factorapi_ReadResponse_descriptor;
+        return datastore.DatastoreService.internal_static_datastore_ReadResponse_descriptor;
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.ReadResponse getDefaultInstanceForType() {
-        return factorapi.DatastoreService.ReadResponse.getDefaultInstance();
+      public datastore.DatastoreService.ReadResponse getDefaultInstanceForType() {
+        return datastore.DatastoreService.ReadResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.ReadResponse build() {
-        factorapi.DatastoreService.ReadResponse result = buildPartial();
+      public datastore.DatastoreService.ReadResponse build() {
+        datastore.DatastoreService.ReadResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1004,14 +1004,14 @@ public final class DatastoreService {
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.ReadResponse buildPartial() {
-        factorapi.DatastoreService.ReadResponse result = new factorapi.DatastoreService.ReadResponse(this);
+      public datastore.DatastoreService.ReadResponse buildPartial() {
+        datastore.DatastoreService.ReadResponse result = new datastore.DatastoreService.ReadResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(factorapi.DatastoreService.ReadResponse result) {
+      private void buildPartial0(datastore.DatastoreService.ReadResponse result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           data_.makeImmutable();
@@ -1053,16 +1053,16 @@ public final class DatastoreService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof factorapi.DatastoreService.ReadResponse) {
-          return mergeFrom((factorapi.DatastoreService.ReadResponse)other);
+        if (other instanceof datastore.DatastoreService.ReadResponse) {
+          return mergeFrom((datastore.DatastoreService.ReadResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(factorapi.DatastoreService.ReadResponse other) {
-        if (other == factorapi.DatastoreService.ReadResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(datastore.DatastoreService.ReadResponse other) {
+        if (other == datastore.DatastoreService.ReadResponse.getDefaultInstance()) return this;
         if (!other.data_.isEmpty()) {
           if (data_.isEmpty()) {
             data_ = other.data_;
@@ -1229,16 +1229,16 @@ public final class DatastoreService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:factorapi.ReadResponse)
+      // @@protoc_insertion_point(builder_scope:datastore.ReadResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:factorapi.ReadResponse)
-    private static final factorapi.DatastoreService.ReadResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:datastore.ReadResponse)
+    private static final datastore.DatastoreService.ReadResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new factorapi.DatastoreService.ReadResponse();
+      DEFAULT_INSTANCE = new datastore.DatastoreService.ReadResponse();
     }
 
-    public static factorapi.DatastoreService.ReadResponse getDefaultInstance() {
+    public static datastore.DatastoreService.ReadResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1274,14 +1274,14 @@ public final class DatastoreService {
     }
 
     @java.lang.Override
-    public factorapi.DatastoreService.ReadResponse getDefaultInstanceForType() {
+    public datastore.DatastoreService.ReadResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface WriteRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:factorapi.WriteRequest)
+      // @@protoc_insertion_point(interface_extends:datastore.WriteRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1336,11 +1336,11 @@ public final class DatastoreService {
         getDelimiterBytes();
   }
   /**
-   * Protobuf type {@code factorapi.WriteRequest}
+   * Protobuf type {@code datastore.WriteRequest}
    */
   public static final class WriteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:factorapi.WriteRequest)
+      // @@protoc_insertion_point(message_implements:datastore.WriteRequest)
       WriteRequestOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use WriteRequest.newBuilder() to construct.
@@ -1362,15 +1362,15 @@ public final class DatastoreService {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return factorapi.DatastoreService.internal_static_factorapi_WriteRequest_descriptor;
+      return datastore.DatastoreService.internal_static_datastore_WriteRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return factorapi.DatastoreService.internal_static_factorapi_WriteRequest_fieldAccessorTable
+      return datastore.DatastoreService.internal_static_datastore_WriteRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              factorapi.DatastoreService.WriteRequest.class, factorapi.DatastoreService.WriteRequest.Builder.class);
+              datastore.DatastoreService.WriteRequest.class, datastore.DatastoreService.WriteRequest.Builder.class);
     }
 
     private int bitField0_;
@@ -1572,10 +1572,10 @@ public final class DatastoreService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof factorapi.DatastoreService.WriteRequest)) {
+      if (!(obj instanceof datastore.DatastoreService.WriteRequest)) {
         return super.equals(obj);
       }
-      factorapi.DatastoreService.WriteRequest other = (factorapi.DatastoreService.WriteRequest) obj;
+      datastore.DatastoreService.WriteRequest other = (datastore.DatastoreService.WriteRequest) obj;
 
       if (hasDestination() != other.hasDestination()) return false;
       if (hasDestination()) {
@@ -1620,44 +1620,44 @@ public final class DatastoreService {
       return hash;
     }
 
-    public static factorapi.DatastoreService.WriteRequest parseFrom(
+    public static datastore.DatastoreService.WriteRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(
+    public static datastore.DatastoreService.WriteRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(
+    public static datastore.DatastoreService.WriteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(
+    public static datastore.DatastoreService.WriteRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(byte[] data)
+    public static datastore.DatastoreService.WriteRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(
+    public static datastore.DatastoreService.WriteRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(java.io.InputStream input)
+    public static datastore.DatastoreService.WriteRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(
+    public static datastore.DatastoreService.WriteRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1665,26 +1665,26 @@ public final class DatastoreService {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static factorapi.DatastoreService.WriteRequest parseDelimitedFrom(java.io.InputStream input)
+    public static datastore.DatastoreService.WriteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static factorapi.DatastoreService.WriteRequest parseDelimitedFrom(
+    public static datastore.DatastoreService.WriteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(
+    public static datastore.DatastoreService.WriteRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static factorapi.DatastoreService.WriteRequest parseFrom(
+    public static datastore.DatastoreService.WriteRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1697,7 +1697,7 @@ public final class DatastoreService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(factorapi.DatastoreService.WriteRequest prototype) {
+    public static Builder newBuilder(datastore.DatastoreService.WriteRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1713,26 +1713,26 @@ public final class DatastoreService {
       return builder;
     }
     /**
-     * Protobuf type {@code factorapi.WriteRequest}
+     * Protobuf type {@code datastore.WriteRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:factorapi.WriteRequest)
-        factorapi.DatastoreService.WriteRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:datastore.WriteRequest)
+        datastore.DatastoreService.WriteRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return factorapi.DatastoreService.internal_static_factorapi_WriteRequest_descriptor;
+        return datastore.DatastoreService.internal_static_datastore_WriteRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return factorapi.DatastoreService.internal_static_factorapi_WriteRequest_fieldAccessorTable
+        return datastore.DatastoreService.internal_static_datastore_WriteRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                factorapi.DatastoreService.WriteRequest.class, factorapi.DatastoreService.WriteRequest.Builder.class);
+                datastore.DatastoreService.WriteRequest.class, datastore.DatastoreService.WriteRequest.Builder.class);
       }
 
-      // Construct using factorapi.DatastoreService.WriteRequest.newBuilder()
+      // Construct using datastore.DatastoreService.WriteRequest.newBuilder()
       private Builder() {
 
       }
@@ -1755,17 +1755,17 @@ public final class DatastoreService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return factorapi.DatastoreService.internal_static_factorapi_WriteRequest_descriptor;
+        return datastore.DatastoreService.internal_static_datastore_WriteRequest_descriptor;
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.WriteRequest getDefaultInstanceForType() {
-        return factorapi.DatastoreService.WriteRequest.getDefaultInstance();
+      public datastore.DatastoreService.WriteRequest getDefaultInstanceForType() {
+        return datastore.DatastoreService.WriteRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.WriteRequest build() {
-        factorapi.DatastoreService.WriteRequest result = buildPartial();
+      public datastore.DatastoreService.WriteRequest build() {
+        datastore.DatastoreService.WriteRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1773,14 +1773,14 @@ public final class DatastoreService {
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.WriteRequest buildPartial() {
-        factorapi.DatastoreService.WriteRequest result = new factorapi.DatastoreService.WriteRequest(this);
+      public datastore.DatastoreService.WriteRequest buildPartial() {
+        datastore.DatastoreService.WriteRequest result = new datastore.DatastoreService.WriteRequest(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(factorapi.DatastoreService.WriteRequest result) {
+      private void buildPartial0(datastore.DatastoreService.WriteRequest result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -1832,16 +1832,16 @@ public final class DatastoreService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof factorapi.DatastoreService.WriteRequest) {
-          return mergeFrom((factorapi.DatastoreService.WriteRequest)other);
+        if (other instanceof datastore.DatastoreService.WriteRequest) {
+          return mergeFrom((datastore.DatastoreService.WriteRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(factorapi.DatastoreService.WriteRequest other) {
-        if (other == factorapi.DatastoreService.WriteRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(datastore.DatastoreService.WriteRequest other) {
+        if (other == datastore.DatastoreService.WriteRequest.getDefaultInstance()) return this;
         if (other.hasDestination()) {
           destination_ = other.destination_;
           bitField0_ |= 0x00000001;
@@ -2167,16 +2167,16 @@ public final class DatastoreService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:factorapi.WriteRequest)
+      // @@protoc_insertion_point(builder_scope:datastore.WriteRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:factorapi.WriteRequest)
-    private static final factorapi.DatastoreService.WriteRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:datastore.WriteRequest)
+    private static final datastore.DatastoreService.WriteRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new factorapi.DatastoreService.WriteRequest();
+      DEFAULT_INSTANCE = new datastore.DatastoreService.WriteRequest();
     }
 
-    public static factorapi.DatastoreService.WriteRequest getDefaultInstance() {
+    public static datastore.DatastoreService.WriteRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2212,33 +2212,33 @@ public final class DatastoreService {
     }
 
     @java.lang.Override
-    public factorapi.DatastoreService.WriteRequest getDefaultInstanceForType() {
+    public datastore.DatastoreService.WriteRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface WriteResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:factorapi.WriteResponse)
+      // @@protoc_insertion_point(interface_extends:datastore.WriteResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .factorapi.WriteResponseStatus status = 1;</code>
+     * <code>optional .datastore.WriteResponseStatus status = 1;</code>
      * @return Whether the status field is set.
      */
     boolean hasStatus();
     /**
-     * <code>optional .factorapi.WriteResponseStatus status = 1;</code>
+     * <code>optional .datastore.WriteResponseStatus status = 1;</code>
      * @return The status.
      */
-    factorapi.DatastoreService.WriteResponseStatus getStatus();
+    datastore.DatastoreService.WriteResponseStatus getStatus();
   }
   /**
-   * Protobuf type {@code factorapi.WriteResponse}
+   * Protobuf type {@code datastore.WriteResponse}
    */
   public static final class WriteResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:factorapi.WriteResponse)
+      // @@protoc_insertion_point(message_implements:datastore.WriteResponse)
       WriteResponseOrBuilder {
   private static final long serialVersionUID = 0L;
     // Use WriteResponse.newBuilder() to construct.
@@ -2258,34 +2258,34 @@ public final class DatastoreService {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return factorapi.DatastoreService.internal_static_factorapi_WriteResponse_descriptor;
+      return datastore.DatastoreService.internal_static_datastore_WriteResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return factorapi.DatastoreService.internal_static_factorapi_WriteResponse_fieldAccessorTable
+      return datastore.DatastoreService.internal_static_datastore_WriteResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              factorapi.DatastoreService.WriteResponse.class, factorapi.DatastoreService.WriteResponse.Builder.class);
+              datastore.DatastoreService.WriteResponse.class, datastore.DatastoreService.WriteResponse.Builder.class);
     }
 
     private int bitField0_;
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_ = 0;
     /**
-     * <code>optional .factorapi.WriteResponseStatus status = 1;</code>
+     * <code>optional .datastore.WriteResponseStatus status = 1;</code>
      * @return Whether the status field is set.
      */
     @java.lang.Override public boolean hasStatus() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional .factorapi.WriteResponseStatus status = 1;</code>
+     * <code>optional .datastore.WriteResponseStatus status = 1;</code>
      * @return The status.
      */
-    @java.lang.Override public factorapi.DatastoreService.WriteResponseStatus getStatus() {
-      factorapi.DatastoreService.WriteResponseStatus result = factorapi.DatastoreService.WriteResponseStatus.forNumber(status_);
-      return result == null ? factorapi.DatastoreService.WriteResponseStatus.SUCCESS : result;
+    @java.lang.Override public datastore.DatastoreService.WriteResponseStatus getStatus() {
+      datastore.DatastoreService.WriteResponseStatus result = datastore.DatastoreService.WriteResponseStatus.forNumber(status_);
+      return result == null ? datastore.DatastoreService.WriteResponseStatus.SUCCESS : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2328,10 +2328,10 @@ public final class DatastoreService {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof factorapi.DatastoreService.WriteResponse)) {
+      if (!(obj instanceof datastore.DatastoreService.WriteResponse)) {
         return super.equals(obj);
       }
-      factorapi.DatastoreService.WriteResponse other = (factorapi.DatastoreService.WriteResponse) obj;
+      datastore.DatastoreService.WriteResponse other = (datastore.DatastoreService.WriteResponse) obj;
 
       if (hasStatus() != other.hasStatus()) return false;
       if (hasStatus()) {
@@ -2357,44 +2357,44 @@ public final class DatastoreService {
       return hash;
     }
 
-    public static factorapi.DatastoreService.WriteResponse parseFrom(
+    public static datastore.DatastoreService.WriteResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(
+    public static datastore.DatastoreService.WriteResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(
+    public static datastore.DatastoreService.WriteResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(
+    public static datastore.DatastoreService.WriteResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(byte[] data)
+    public static datastore.DatastoreService.WriteResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(
+    public static datastore.DatastoreService.WriteResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(java.io.InputStream input)
+    public static datastore.DatastoreService.WriteResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(
+    public static datastore.DatastoreService.WriteResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2402,26 +2402,26 @@ public final class DatastoreService {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static factorapi.DatastoreService.WriteResponse parseDelimitedFrom(java.io.InputStream input)
+    public static datastore.DatastoreService.WriteResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static factorapi.DatastoreService.WriteResponse parseDelimitedFrom(
+    public static datastore.DatastoreService.WriteResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(
+    public static datastore.DatastoreService.WriteResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static factorapi.DatastoreService.WriteResponse parseFrom(
+    public static datastore.DatastoreService.WriteResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2434,7 +2434,7 @@ public final class DatastoreService {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(factorapi.DatastoreService.WriteResponse prototype) {
+    public static Builder newBuilder(datastore.DatastoreService.WriteResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2450,26 +2450,26 @@ public final class DatastoreService {
       return builder;
     }
     /**
-     * Protobuf type {@code factorapi.WriteResponse}
+     * Protobuf type {@code datastore.WriteResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:factorapi.WriteResponse)
-        factorapi.DatastoreService.WriteResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:datastore.WriteResponse)
+        datastore.DatastoreService.WriteResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return factorapi.DatastoreService.internal_static_factorapi_WriteResponse_descriptor;
+        return datastore.DatastoreService.internal_static_datastore_WriteResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return factorapi.DatastoreService.internal_static_factorapi_WriteResponse_fieldAccessorTable
+        return datastore.DatastoreService.internal_static_datastore_WriteResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                factorapi.DatastoreService.WriteResponse.class, factorapi.DatastoreService.WriteResponse.Builder.class);
+                datastore.DatastoreService.WriteResponse.class, datastore.DatastoreService.WriteResponse.Builder.class);
       }
 
-      // Construct using factorapi.DatastoreService.WriteResponse.newBuilder()
+      // Construct using datastore.DatastoreService.WriteResponse.newBuilder()
       private Builder() {
 
       }
@@ -2490,17 +2490,17 @@ public final class DatastoreService {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return factorapi.DatastoreService.internal_static_factorapi_WriteResponse_descriptor;
+        return datastore.DatastoreService.internal_static_datastore_WriteResponse_descriptor;
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.WriteResponse getDefaultInstanceForType() {
-        return factorapi.DatastoreService.WriteResponse.getDefaultInstance();
+      public datastore.DatastoreService.WriteResponse getDefaultInstanceForType() {
+        return datastore.DatastoreService.WriteResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.WriteResponse build() {
-        factorapi.DatastoreService.WriteResponse result = buildPartial();
+      public datastore.DatastoreService.WriteResponse build() {
+        datastore.DatastoreService.WriteResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2508,14 +2508,14 @@ public final class DatastoreService {
       }
 
       @java.lang.Override
-      public factorapi.DatastoreService.WriteResponse buildPartial() {
-        factorapi.DatastoreService.WriteResponse result = new factorapi.DatastoreService.WriteResponse(this);
+      public datastore.DatastoreService.WriteResponse buildPartial() {
+        datastore.DatastoreService.WriteResponse result = new datastore.DatastoreService.WriteResponse(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(factorapi.DatastoreService.WriteResponse result) {
+      private void buildPartial0(datastore.DatastoreService.WriteResponse result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -2559,16 +2559,16 @@ public final class DatastoreService {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof factorapi.DatastoreService.WriteResponse) {
-          return mergeFrom((factorapi.DatastoreService.WriteResponse)other);
+        if (other instanceof datastore.DatastoreService.WriteResponse) {
+          return mergeFrom((datastore.DatastoreService.WriteResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(factorapi.DatastoreService.WriteResponse other) {
-        if (other == factorapi.DatastoreService.WriteResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(datastore.DatastoreService.WriteResponse other) {
+        if (other == datastore.DatastoreService.WriteResponse.getDefaultInstance()) return this;
         if (other.hasStatus()) {
           setStatus(other.getStatus());
         }
@@ -2600,8 +2600,8 @@ public final class DatastoreService {
                 break;
               case 8: {
                 int tmpRaw = input.readEnum();
-                factorapi.DatastoreService.WriteResponseStatus tmpValue =
-                    factorapi.DatastoreService.WriteResponseStatus.forNumber(tmpRaw);
+                datastore.DatastoreService.WriteResponseStatus tmpValue =
+                    datastore.DatastoreService.WriteResponseStatus.forNumber(tmpRaw);
                 if (tmpValue == null) {
                   mergeUnknownVarintField(1, tmpRaw);
                 } else {
@@ -2629,27 +2629,27 @@ public final class DatastoreService {
 
       private int status_ = 0;
       /**
-       * <code>optional .factorapi.WriteResponseStatus status = 1;</code>
+       * <code>optional .datastore.WriteResponseStatus status = 1;</code>
        * @return Whether the status field is set.
        */
       @java.lang.Override public boolean hasStatus() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional .factorapi.WriteResponseStatus status = 1;</code>
+       * <code>optional .datastore.WriteResponseStatus status = 1;</code>
        * @return The status.
        */
       @java.lang.Override
-      public factorapi.DatastoreService.WriteResponseStatus getStatus() {
-        factorapi.DatastoreService.WriteResponseStatus result = factorapi.DatastoreService.WriteResponseStatus.forNumber(status_);
-        return result == null ? factorapi.DatastoreService.WriteResponseStatus.SUCCESS : result;
+      public datastore.DatastoreService.WriteResponseStatus getStatus() {
+        datastore.DatastoreService.WriteResponseStatus result = datastore.DatastoreService.WriteResponseStatus.forNumber(status_);
+        return result == null ? datastore.DatastoreService.WriteResponseStatus.SUCCESS : result;
       }
       /**
-       * <code>optional .factorapi.WriteResponseStatus status = 1;</code>
+       * <code>optional .datastore.WriteResponseStatus status = 1;</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
-      public Builder setStatus(factorapi.DatastoreService.WriteResponseStatus value) {
+      public Builder setStatus(datastore.DatastoreService.WriteResponseStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2659,7 +2659,7 @@ public final class DatastoreService {
         return this;
       }
       /**
-       * <code>optional .factorapi.WriteResponseStatus status = 1;</code>
+       * <code>optional .datastore.WriteResponseStatus status = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -2681,16 +2681,16 @@ public final class DatastoreService {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:factorapi.WriteResponse)
+      // @@protoc_insertion_point(builder_scope:datastore.WriteResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:factorapi.WriteResponse)
-    private static final factorapi.DatastoreService.WriteResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:datastore.WriteResponse)
+    private static final datastore.DatastoreService.WriteResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new factorapi.DatastoreService.WriteResponse();
+      DEFAULT_INSTANCE = new datastore.DatastoreService.WriteResponse();
     }
 
-    public static factorapi.DatastoreService.WriteResponse getDefaultInstance() {
+    public static datastore.DatastoreService.WriteResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2726,32 +2726,32 @@ public final class DatastoreService {
     }
 
     @java.lang.Override
-    public factorapi.DatastoreService.WriteResponse getDefaultInstanceForType() {
+    public datastore.DatastoreService.WriteResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_factorapi_ReadRequest_descriptor;
+    internal_static_datastore_ReadRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_factorapi_ReadRequest_fieldAccessorTable;
+      internal_static_datastore_ReadRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_factorapi_ReadResponse_descriptor;
+    internal_static_datastore_ReadResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_factorapi_ReadResponse_fieldAccessorTable;
+      internal_static_datastore_ReadResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_factorapi_WriteRequest_descriptor;
+    internal_static_datastore_WriteRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_factorapi_WriteRequest_fieldAccessorTable;
+      internal_static_datastore_WriteRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_factorapi_WriteResponse_descriptor;
+    internal_static_datastore_WriteResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_factorapi_WriteResponse_fieldAccessorTable;
+      internal_static_datastore_WriteResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2761,45 +2761,45 @@ public final class DatastoreService {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027datastore_service.proto\022\tfactorapi\"\035\n\013" +
+      "\n\027datastore_service.proto\022\tdatastore\"\035\n\013" +
       "ReadRequest\022\016\n\006source\030\001 \001(\t\"\034\n\014ReadRespo" +
       "nse\022\014\n\004data\030\001 \003(\005\"I\n\014WriteRequest\022\023\n\013des" +
       "tination\030\001 \001(\t\022\021\n\twriteData\030\002 \001(\t\022\021\n\tdel" +
       "imiter\030\003 \001(\t\"?\n\rWriteResponse\022.\n\006status\030" +
-      "\001 \001(\0162\036.factorapi.WriteResponseStatus*/\n" +
+      "\001 \001(\0162\036.datastore.WriteResponseStatus*/\n" +
       "\023WriteResponseStatus\022\013\n\007SUCCESS\020\000\022\013\n\007FAI" +
-      "LURE\020\0012\202\001\n\013DataStorage\0227\n\004read\022\026.factora" +
-      "pi.ReadRequest\032\027.factorapi.ReadResponse\022" +
-      ":\n\005write\022\027.factorapi.WriteRequest\032\030.fact" +
-      "orapi.WriteResponse"
+      "LURE\020\0012\202\001\n\013DataStorage\0227\n\004read\022\026.datasto" +
+      "re.ReadRequest\032\027.datastore.ReadResponse\022" +
+      ":\n\005write\022\027.datastore.WriteRequest\032\030.data" +
+      "store.WriteResponse"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_factorapi_ReadRequest_descriptor =
+    internal_static_datastore_ReadRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_factorapi_ReadRequest_fieldAccessorTable = new
+    internal_static_datastore_ReadRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_factorapi_ReadRequest_descriptor,
+        internal_static_datastore_ReadRequest_descriptor,
         new java.lang.String[] { "Source", });
-    internal_static_factorapi_ReadResponse_descriptor =
+    internal_static_datastore_ReadResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_factorapi_ReadResponse_fieldAccessorTable = new
+    internal_static_datastore_ReadResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_factorapi_ReadResponse_descriptor,
+        internal_static_datastore_ReadResponse_descriptor,
         new java.lang.String[] { "Data", });
-    internal_static_factorapi_WriteRequest_descriptor =
+    internal_static_datastore_WriteRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_factorapi_WriteRequest_fieldAccessorTable = new
+    internal_static_datastore_WriteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_factorapi_WriteRequest_descriptor,
+        internal_static_datastore_WriteRequest_descriptor,
         new java.lang.String[] { "Destination", "WriteData", "Delimiter", });
-    internal_static_factorapi_WriteResponse_descriptor =
+    internal_static_datastore_WriteResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_factorapi_WriteResponse_fieldAccessorTable = new
+    internal_static_datastore_WriteResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_factorapi_WriteResponse_descriptor,
+        internal_static_datastore_WriteResponse_descriptor,
         new java.lang.String[] { "Status", });
   }
 
