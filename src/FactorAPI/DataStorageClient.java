@@ -7,12 +7,10 @@ import java.util.concurrent.TimeUnit;
 import datastore.DataStorageGrpc;
 import datastore.DataStorageGrpc.DataStorageBlockingStub;
 import datastore.DatastoreService;
-import datastore.DatastoreService.WriteResponseStatus;
 import io.grpc.Channel;
 import io.grpc.Grpc;
 import io.grpc.InsecureChannelCredentials;
 import io.grpc.ManagedChannel;
-import io.grpc.StatusRuntimeException;
 
 public class DataStorageClient implements DataStorage { // Boilerplate TODO: change to <servicename>Client
     private final DataStorageBlockingStub blockingStub; // Boilerplate TODO: update to appropriate blocking stub

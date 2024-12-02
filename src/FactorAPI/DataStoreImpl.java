@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 
 import factorapi.WriteResponse.WriteResponseStatus; 
@@ -15,8 +16,11 @@ public class DataStoreImpl implements DataStorage{
 	
 	@Override
 	public ReadResponse read(ReadRequest readRequest) {
+		ArrayList<Integer> readData = new ArrayList<>();
 
-		ArrayList<Integer> readData = (ArrayList<Integer>) readHelper(readRequest);
+		for(Integer i : readHelper(readRequest)){
+			readData.add(i);
+		}
 		
 		DataReadResponse dataReadResponse = new DataReadResponse(readData);
 		

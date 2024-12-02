@@ -9,11 +9,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ComputationCoordinatorImpl extends ComputationCoordinatorGrpc.ComputationCoordinatorImplBase {
-    private final DataStorage ds;
+    private final DataStorageImpl ds;
     private final ComputeEngine ce;
     int nthreads = 4;
 
-    public ComputationCoordinatorImpl(DataStorage ds, ComputeEngine ce) {
+    public ComputationCoordinatorImpl(DataStorageImpl ds, ComputeEngine ce) {
         this.ds = ds;
         this.ce = ce;
     }
@@ -27,7 +27,7 @@ public class ComputationCoordinatorImpl extends ComputationCoordinatorGrpc.Compu
         CoordinatorService.ComputeResult result;
         CoordinatorService.ComputeRequest.Builder computeRequestBuilder = CoordinatorService.ComputeRequest.newBuilder();
         try {
-            List<Integer> integers = request.getFactorsList() != null ? request.getFactorsList() : ds.read(new ReadRequest(request.getSource())).getData();
+            List<Integer> integers = (request.getFactorsList() != null && ! request.getFactorsList().isEmpty()) ? request.getFactorsList() : ds.read(new ReadRequest(request.getSource())).getData();
             for(int i = 0; i<integers.size(); i++){
                 computeRequestBuilder.setFactors(i,integers.get(i));
             }
