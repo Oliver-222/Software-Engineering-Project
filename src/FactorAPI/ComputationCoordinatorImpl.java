@@ -28,9 +28,7 @@ public class ComputationCoordinatorImpl extends ComputationCoordinatorGrpc.Compu
         CoordinatorService.ComputeRequest.Builder computeRequestBuilder = CoordinatorService.ComputeRequest.newBuilder();
         try {
             List<Integer> integers = (request.getFactorsList() != null && ! request.getFactorsList().isEmpty()) ? request.getFactorsList() : ds.read(new ReadRequest(request.getSource())).getData();
-            for(int i = 0; i<integers.size(); i++){
-                computeRequestBuilder.setFactors(i,integers.get(i));
-            }
+            integers.forEach(num -> computeRequestBuilder.addFactors(num));
             final CoordinatorService.ComputeRequest computeRequest = computeRequestBuilder.setDelimiter(request.getDelimiter()).setSource(request.getSource()).setDestination(request.getDestination()).build();
             Callable<Void> user = () -> {
                 String factors = ce.executeJob(computeRequest);
@@ -45,7 +43,8 @@ public class ComputationCoordinatorImpl extends ComputationCoordinatorGrpc.Compu
             //result = new ComputeResult(ComputeResult.ComputeResultStatus.SUCCESS, "Success!");
         } catch (Exception e) {
            result = CoordinatorService.ComputeResult.newBuilder().setStatus(CoordinatorService.ComputeResultStatus.FAILURE).setMessage("Unexpected Failure " + e.toString()).build();
-            //result = new ComputeResult(ComputeResult.ComputeResultStatus.FAILURE, "Unexpected failure: " + e.getMessage());
+           e.printStackTrace(System.out);
+           //result = new ComputeResult(ComputeResult.ComputeResultStatus.FAILURE, "Unexpected failure: " + e.getMessage());
         }
         responseObserver.onNext(result);
         responseObserver.onCompleted();
