@@ -13,7 +13,7 @@ public class ComputationCoordinatorServer { // Boilerplate: Changed name of clas
     private void start() throws IOException {
         /* The port on which the server should run */
         int port = 50055; // Boilerplate: Set port number (only one server per port)
-        DataStoreImpl ds = new DataStoreImpl();
+        DataStorageImpl ds = new DataStorageImpl();
         ComputeEngineImpl ce = new ComputeEngineImpl();
         server = Grpc.newServerBuilderForPort(port, InsecureServerCredentials.create())
                 .addService(new ComputationCoordinatorImpl(ds,ce)) // Boilerplate: Changed name of class
