@@ -21,15 +21,18 @@ public class TestDataStorageTimeout {
 
         try {
             // Configure the mock to throw a TimeoutException for the read method
-            Mockito.when(ds.read(mockRequest)).thenThrow(new TimeoutException("Read operation timed out"));
+            Mockito.when(ds.read(Mockito.any(ReadRequest.class))).thenThrow(new TimeoutException("Read operation timed out"));
 
             // Call the read method, expecting a TimeoutException
             ds.read(mockRequest);
+
+            // If no exception is thrown, the test should fail
             fail("Expected a TimeoutException to be thrown");
         } catch (TimeoutException e) {
             // Verify that the exception is handled as expected
             System.out.println("Timeout handled successfully: " + e.getMessage());
         } catch (Exception e) {
+            // Fail the test for any unexpected exception
             fail("Unexpected exception: " + e.getMessage());
         }
     }
