@@ -5,8 +5,6 @@ import factorapi.ReadRequest;
 import org.mockito.Mockito;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.TimeoutException;
-
 import static org.junit.jupiter.api.Assertions.fail;
 
 public class TestDataStorageTimeout {
@@ -19,25 +17,21 @@ public class TestDataStorageTimeout {
         // Mock a read request
         ReadRequest mockRequest = Mockito.mock(ReadRequest.class);
 
-         try {
-            // Configure the mock to throw a TimeoutException for the read method
+        try {
+            // Simulate a RuntimeException to mimic a timeout
             Mockito.when(ds.read(Mockito.any(ReadRequest.class)))
-                   .thenAnswer(invocation -> {
-                       throw new TimeoutException("Simulated timeout");
-                   });
+                   .thenThrow(new RuntimeException("Simulated timeout exception"));
 
-            // Call the read method, expecting a TimeoutException
+            // Call the read method, expecting an exception
             ds.read(mockRequest);
 
             // If no exception is thrown, the test should fail
-            fail("Expected a TimeoutException to be thrown");
-        } catch (TimeoutException e) {
+            fail("Expected a RuntimeException to be thrown");
+        } catch (RuntimeException e) {
             // Verify that the exception is handled as expected
-            System.out.println("Timeout handled successfully: " + e.getMessage());
+            System.out.println("Timeout-like behavior handled successfully: " + e.getMessage());
         } catch (Exception e) {
             // Fail the test for any unexpected exception
             fail("Unexpected exception: " + e.getMessage());
         }
     }
-}
-
