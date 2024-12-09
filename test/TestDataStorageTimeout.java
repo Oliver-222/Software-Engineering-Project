@@ -19,9 +19,12 @@ public class TestDataStorageTimeout {
         // Mock a read request
         ReadRequest mockRequest = Mockito.mock(ReadRequest.class);
 
-        try {
+         try {
             // Configure the mock to throw a TimeoutException for the read method
-            Mockito.when(ds.read(Mockito.any(ReadRequest.class))).thenThrow(new TimeoutException("Read operation timed out"));
+            Mockito.when(ds.read(Mockito.any(ReadRequest.class)))
+                   .thenAnswer(invocation -> {
+                       throw new TimeoutException("Simulated timeout");
+                   });
 
             // Call the read method, expecting a TimeoutException
             ds.read(mockRequest);
