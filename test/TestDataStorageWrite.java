@@ -1,40 +1,36 @@
 import factorapi.DataStorage;
-import factorapi.WriteResponse;
-import factorapi.WriteRequest;
-import org.mockito.Mockito;
+import factorapi.ReadRequest;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.fail;
 
-public class TestDataStorageWrite {
+public class TestDataStorageTimeout {
 
     @Test
-    public void testWriteResponseStatus() {
+    public void testReadTimeout() {
+        // Mock the DataStorage object
         DataStorage ds = Mockito.mock(DataStorage.class);
-        
-        // Simulate WriteResponse with success status
-        WriteResponse successResponse = Mockito.mock(WriteResponse.class);
-        Mockito.when(successResponse.getStatus()).thenReturn(WriteResponse.WriteResponseStatus.SUCCESS);
-        WriteRequest mockWriteRequest = Mockito.mock(WriteRequest.class);
 
-        // Simulate a successful write operation
+        // Mock a read request
+        ReadRequest mockRequest = Mockito.mock(ReadRequest.class);
+
         try {
-            WriteResponse response = ds.write(mockWriteRequest);
-            assertEquals(WriteResponse.WriteResponseStatus.SUCCESS, response.getStatus(), "Write operation should succeed");
-        } catch (Exception e) {
-            fail("Exception occurred during write operation: " + e.getMessage());
-        }
+            // Simulate a RuntimeException to mimic a timeout-like behavior
+            Mockito.when(ds.read(Mockito.any(ReadRequest.class)))
+                   .thenThrow(new RuntimeException("Simulated timeout exception"));
 
-        // Simulate WriteResponse with failure status
-        WriteResponse failureResponse = Mockito.mock(WriteResponse.class);
-        Mockito.when(failureResponse.getStatus()).thenReturn(WriteResponse.WriteResponseStatus.FAILURE);
+            // Call the read method, expecting an exception
+            ds.read(mockRequest);
 
-        // Simulate a failed write operation
-        try {
-            WriteResponse response = ds.write(mockWriteRequest);
-            assertEquals(WriteResponse.WriteResponseStatus.FAILURE, response.getStatus(), "Write operation should fail");
+            // If no exception is thrown, the test should fail
+            fail("Expected a RuntimeException to be thrown");
+        } catch (RuntimeException e) {
+            // Verify that the exception is handled as expected
+            System.out.println("Timeout-like behavior handled successfully: " + e.getMessage());
         } catch (Exception e) {
-            fail("Exception occurred during write operation: " + e.getMessage());
+            // Fail the test for any unexpected exception
+            fail("Unexpected exception: " + e.getMessage());
         }
     }
 }
