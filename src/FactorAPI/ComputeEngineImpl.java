@@ -58,7 +58,7 @@ public class ComputeEngineImpl implements ComputeEngine {
         StringBuilder result = new StringBuilder();
 
 
-            Integer number = factorList.getFirst();
+            Integer number = factorList.get(0);
             result.append(number).append(":");
 
             boolean firstFactor = true; //handle delimiter without extra commas
