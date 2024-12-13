@@ -1,11 +1,15 @@
 package factorapi;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.BoxLayout;
+import java.awt.Font;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ResultFrame extends JFrame implements ActionListener {
+public class ResultFrame extends JFrame {
 
     private final String result;
     //Labels: Will need labels for all data we want to display, and to tell the user which areas show which data
@@ -155,8 +159,5 @@ public class ResultFrame extends JFrame implements ActionListener {
 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
 
-    }
 }
