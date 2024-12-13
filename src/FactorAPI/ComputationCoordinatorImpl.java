@@ -64,9 +64,9 @@ public class ComputationCoordinatorImpl extends ComputationCoordinatorGrpc.Compu
             final CoordinatorService.ComputeRequest computeRequest = computeRequestBuilder.setDelimiter(request.getDelimiter()).setSource(request.getSource()).setDestination(request.getDestination()).build();
             Callable<Void> user = () -> {
                 String factors = ce.executeSingle(computeRequest);
-                ResultFrame rFrame = new ResultFrame(factors);
-                rFrame.parseData();
-                rFrame.createFrame();
+                ResultFrame resultFrame = new ResultFrame(factors);
+                resultFrame.parseData();
+                resultFrame.createFrame();
                 //ds.write(new WriteRequest(computeRequest, factors));
                 return null;
             };
