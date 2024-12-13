@@ -121,7 +121,7 @@ public class DataStoreImpl implements DataStorage{
 //	        });
 	        writeToFile(output.destination, output.writeData + output.delimiter);
 
-	        /* 
+	        /*
 	         * Using lambda syntax to create an instance of WriteResult. This is an alternative to the ComputeResult approach of providing
 	         * constants for success/failure.
 	         */
@@ -135,7 +135,12 @@ public class DataStoreImpl implements DataStorage{
 		// use try-with-resources syntax to automatically close the file writer
 		// use the append-friendly version of the constructor
 		try (FileWriter writer = new FileWriter(new File(fileName), true)) {
-			writer.append(line);
+//			writer.append(line);
+			String[] newLine = line.split(";");
+			for(String s : newLine){
+				writer.append(s + "\n");
+			}
+
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}

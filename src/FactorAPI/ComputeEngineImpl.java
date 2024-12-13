@@ -45,6 +45,44 @@ public class ComputeEngineImpl implements ComputeEngine {
         }
         return result.toString();
     }
+
+    public String executeSingle(CoordinatorService.ComputeRequest request){
+        if(request == null){
+            throw new IllegalArgumentException("ComputeRequest cannot be null.");
+        }
+        List<Integer> factorList = request.getFactorsList();
+
+        if(factorList == null){
+            throw new IllegalArgumentException("Factors list cannot be null.");
+        }
+        StringBuilder result = new StringBuilder();
+
+
+            Integer number = factorList.getFirst();
+            result.append(number).append(":");
+
+            boolean firstFactor = true; //handle delimiter without extra commas
+            //factors up to the square root of the number
+            for(int i = 1; i * i <= number; i++){
+                if(number % i == 0){
+                    if(!firstFactor){
+                        result.append(",");
+                    }
+                    result.append(i);
+                    firstFactor = false;
+
+                    //avoid adding the square root twice (perfect squares)
+                    if(i != number / i){
+                        result.append(",");
+                        result.append(number / i);
+                    }
+                }
+            }
+
+
+        return result.toString();
+    }
+
     public String executeJob(CoordinatorService.ComputeRequest request) {
         if(request == null){
             throw new IllegalArgumentException("ComputeRequest cannot be null.");

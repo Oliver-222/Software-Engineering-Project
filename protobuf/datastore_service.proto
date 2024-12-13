@@ -1,4 +1,4 @@
-package factorapi;
+package datastore;
 
 
 enum WriteResponseStatus {

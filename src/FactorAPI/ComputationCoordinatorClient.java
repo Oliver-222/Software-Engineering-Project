@@ -12,7 +12,7 @@ import io.grpc.InsecureChannelCredentials;
 import io.grpc.ManagedChannel;
 import io.grpc.StatusRuntimeException;
 
-import coordinator.ComputationCoordinatorGrpc;
+import service.ComputationCoordinatorGrpc;
 import service.CoordinatorService;
 
 public class ComputationCoordinatorClient { // Boilerplate: changed to ComputationCoordinatorClient
@@ -39,6 +39,7 @@ public class ComputationCoordinatorClient { // Boilerplate: changed to Computati
         CoordinatorService.ComputeResult response;
         try {
             response = blockingStub.compute(computeRequest);
+
         } catch (StatusRuntimeException e) {
             e.printStackTrace();
             return;
@@ -48,6 +49,28 @@ public class ComputationCoordinatorClient { // Boilerplate: changed to Computati
         } else {
             System.out.println("Success: " + response.getStatus());
         }
+
+        System.out.println("Would you like to see a visual? (Only will use the first input in your file)");
+        System.out.println("Answer Y/N:");
+        String choice = sc.next();
+        if(choice.equals("Y")){
+            try {
+                response = blockingStub.computeSingle(computeRequest);
+            } catch (StatusRuntimeException e) {
+                e.printStackTrace();
+
+            }
+        } else if(choice.equals("N")){
+            try {
+                response = blockingStub.compute(computeRequest);
+            } catch (StatusRuntimeException e) {
+                e.printStackTrace();
+
+            }
+        } else {
+            System.out.println("Invalid input");
+        }
+
     }
 
     public static void main(String[] args) throws Exception {

@@ -6,6 +6,7 @@ import service.CoordinatorService;
 public interface ComputeEngine {
     String executeJob(ComputeRequest computeRequest);
     String executeJob(CoordinatorService.ComputeRequest computeRequest);
+    String executeSingle(CoordinatorService.ComputeRequest computeRequest);
 }
 
 

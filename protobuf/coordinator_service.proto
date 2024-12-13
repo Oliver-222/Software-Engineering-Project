@@ -1,3 +1,4 @@
+package service;
 enum ComputeResultStatus {
     SUCCESS = 0;
     FAILURE = 1;
@@ -28,4 +29,5 @@ message WriteRequest {
 
 service ComputationCoordinator {
     rpc compute(ComputeRequest) returns (ComputeResult);
+    rpc computeSingle(ComputeRequest) returns (ComputeResult);
 }
