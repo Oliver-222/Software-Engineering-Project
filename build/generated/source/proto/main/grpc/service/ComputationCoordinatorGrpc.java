@@ -1,8 +1,7 @@
-package coordinator;
-
-import service.CoordinatorService;
+package service;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
+
 /**
  */
 @javax.annotation.Generated(
@@ -13,38 +12,69 @@ public final class ComputationCoordinatorGrpc {
 
   private ComputationCoordinatorGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "ComputationCoordinator";
+  public static final java.lang.String SERVICE_NAME = "service.ComputationCoordinator";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<CoordinatorService.ComputeRequest,
-      CoordinatorService.ComputeResult> getComputeMethod;
+  private static volatile io.grpc.MethodDescriptor<service.CoordinatorService.ComputeRequest,
+      service.CoordinatorService.ComputeResult> getComputeMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "compute",
-      requestType = CoordinatorService.ComputeRequest.class,
-      responseType = CoordinatorService.ComputeResult.class,
+      requestType = service.CoordinatorService.ComputeRequest.class,
+      responseType = service.CoordinatorService.ComputeResult.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<CoordinatorService.ComputeRequest,
-      CoordinatorService.ComputeResult> getComputeMethod() {
-    io.grpc.MethodDescriptor<CoordinatorService.ComputeRequest, CoordinatorService.ComputeResult> getComputeMethod;
+  public static io.grpc.MethodDescriptor<service.CoordinatorService.ComputeRequest,
+      service.CoordinatorService.ComputeResult> getComputeMethod() {
+    io.grpc.MethodDescriptor<service.CoordinatorService.ComputeRequest, service.CoordinatorService.ComputeResult> getComputeMethod;
     if ((getComputeMethod = ComputationCoordinatorGrpc.getComputeMethod) == null) {
       synchronized (ComputationCoordinatorGrpc.class) {
         if ((getComputeMethod = ComputationCoordinatorGrpc.getComputeMethod) == null) {
           ComputationCoordinatorGrpc.getComputeMethod = getComputeMethod =
-              io.grpc.MethodDescriptor.<CoordinatorService.ComputeRequest, CoordinatorService.ComputeResult>newBuilder()
+              io.grpc.MethodDescriptor.<service.CoordinatorService.ComputeRequest, service.CoordinatorService.ComputeResult>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "compute"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  CoordinatorService.ComputeRequest.getDefaultInstance()))
+                  service.CoordinatorService.ComputeRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  CoordinatorService.ComputeResult.getDefaultInstance()))
+                  service.CoordinatorService.ComputeResult.getDefaultInstance()))
               .setSchemaDescriptor(new ComputationCoordinatorMethodDescriptorSupplier("compute"))
               .build();
         }
       }
     }
     return getComputeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<service.CoordinatorService.ComputeRequest,
+      service.CoordinatorService.ComputeResult> getComputeSingleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "computeSingle",
+      requestType = service.CoordinatorService.ComputeRequest.class,
+      responseType = service.CoordinatorService.ComputeResult.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<service.CoordinatorService.ComputeRequest,
+      service.CoordinatorService.ComputeResult> getComputeSingleMethod() {
+    io.grpc.MethodDescriptor<service.CoordinatorService.ComputeRequest, service.CoordinatorService.ComputeResult> getComputeSingleMethod;
+    if ((getComputeSingleMethod = ComputationCoordinatorGrpc.getComputeSingleMethod) == null) {
+      synchronized (ComputationCoordinatorGrpc.class) {
+        if ((getComputeSingleMethod = ComputationCoordinatorGrpc.getComputeSingleMethod) == null) {
+          ComputationCoordinatorGrpc.getComputeSingleMethod = getComputeSingleMethod =
+              io.grpc.MethodDescriptor.<service.CoordinatorService.ComputeRequest, service.CoordinatorService.ComputeResult>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "computeSingle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  service.CoordinatorService.ComputeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  service.CoordinatorService.ComputeResult.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputationCoordinatorMethodDescriptorSupplier("computeSingle"))
+              .build();
+        }
+      }
+    }
+    return getComputeSingleMethod;
   }
 
   /**
@@ -97,9 +127,16 @@ public final class ComputationCoordinatorGrpc {
 
     /**
      */
-    default void compute(CoordinatorService.ComputeRequest request,
-                         io.grpc.stub.StreamObserver<CoordinatorService.ComputeResult> responseObserver) {
+    default void compute(service.CoordinatorService.ComputeRequest request,
+        io.grpc.stub.StreamObserver<service.CoordinatorService.ComputeResult> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getComputeMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void computeSingle(service.CoordinatorService.ComputeRequest request,
+        io.grpc.stub.StreamObserver<service.CoordinatorService.ComputeResult> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getComputeSingleMethod(), responseObserver);
     }
   }
 
@@ -132,10 +169,18 @@ public final class ComputationCoordinatorGrpc {
 
     /**
      */
-    public void compute(CoordinatorService.ComputeRequest request,
-                        io.grpc.stub.StreamObserver<CoordinatorService.ComputeResult> responseObserver) {
+    public void compute(service.CoordinatorService.ComputeRequest request,
+        io.grpc.stub.StreamObserver<service.CoordinatorService.ComputeResult> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getComputeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void computeSingle(service.CoordinatorService.ComputeRequest request,
+        io.grpc.stub.StreamObserver<service.CoordinatorService.ComputeResult> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getComputeSingleMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -157,9 +202,16 @@ public final class ComputationCoordinatorGrpc {
 
     /**
      */
-    public CoordinatorService.ComputeResult compute(CoordinatorService.ComputeRequest request) {
+    public service.CoordinatorService.ComputeResult compute(service.CoordinatorService.ComputeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getComputeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public service.CoordinatorService.ComputeResult computeSingle(service.CoordinatorService.ComputeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getComputeSingleMethod(), getCallOptions(), request);
     }
   }
 
@@ -181,14 +233,23 @@ public final class ComputationCoordinatorGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<CoordinatorService.ComputeResult> compute(
-        CoordinatorService.ComputeRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<service.CoordinatorService.ComputeResult> compute(
+        service.CoordinatorService.ComputeRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getComputeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<service.CoordinatorService.ComputeResult> computeSingle(
+        service.CoordinatorService.ComputeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getComputeSingleMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_COMPUTE = 0;
+  private static final int METHODID_COMPUTE_SINGLE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -208,8 +269,12 @@ public final class ComputationCoordinatorGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_COMPUTE:
-          serviceImpl.compute((CoordinatorService.ComputeRequest) request,
-              (io.grpc.stub.StreamObserver<CoordinatorService.ComputeResult>) responseObserver);
+          serviceImpl.compute((service.CoordinatorService.ComputeRequest) request,
+              (io.grpc.stub.StreamObserver<service.CoordinatorService.ComputeResult>) responseObserver);
+          break;
+        case METHODID_COMPUTE_SINGLE:
+          serviceImpl.computeSingle((service.CoordinatorService.ComputeRequest) request,
+              (io.grpc.stub.StreamObserver<service.CoordinatorService.ComputeResult>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -233,9 +298,16 @@ public final class ComputationCoordinatorGrpc {
           getComputeMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              CoordinatorService.ComputeRequest,
-              CoordinatorService.ComputeResult>(
+              service.CoordinatorService.ComputeRequest,
+              service.CoordinatorService.ComputeResult>(
                 service, METHODID_COMPUTE)))
+        .addMethod(
+          getComputeSingleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              service.CoordinatorService.ComputeRequest,
+              service.CoordinatorService.ComputeResult>(
+                service, METHODID_COMPUTE_SINGLE)))
         .build();
   }
 
@@ -245,7 +317,7 @@ public final class ComputationCoordinatorGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return CoordinatorService.getDescriptor();
+      return service.CoordinatorService.getDescriptor();
     }
 
     @java.lang.Override
@@ -285,6 +357,7 @@ public final class ComputationCoordinatorGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ComputationCoordinatorFileDescriptorSupplier())
               .addMethod(getComputeMethod())
+              .addMethod(getComputeSingleMethod())
               .build();
         }
       }
